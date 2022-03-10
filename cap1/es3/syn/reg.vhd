@@ -1,0 +1,37 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE WORK.constants.ALL;
+
+ENTITY REG IS
+	GENERIC (NBIT : INTEGER := NumBit);
+	PORT (
+		D : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+		CK : IN STD_LOGIC;
+		RESET : IN STD_LOGIC;
+		Q : OUT STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0));
+END REG;
+
+ARCHITECTURE sync OF REG IS
+BEGIN
+	GEN_FOR : FOR I IN 1 TO NBIT GENERATE
+		FD_I : ENTITY work.fd(PIPPO)
+			PORT MAP(
+				D => D(I - 1),
+				CK => CK,
+				RESET => RESET,
+				Q => Q(I - 1)
+			);
+	END GENERATE;
+END sync;
+ARCHITECTURE async OF REG IS
+BEGIN
+	GEN_FOR : FOR I IN 1 TO NBIT GENERATE
+		FD_I : ENTITY work.fd(PLUTO)
+			PORT MAP(
+				D => D(I - 1),
+				CK => CK,
+				RESET => RESET,
+				Q => Q(I - 1)
+			);
+	END GENERATE;
+END async;
