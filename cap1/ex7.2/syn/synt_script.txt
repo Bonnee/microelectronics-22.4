@@ -1,0 +1,3 @@
+ analyze -library WORK -format vhdl {/home/ms22.4/cap1/ex7.2/syn/alu.vhd}
+ elaborate ALU -architecture BEHAVIOR -library WORK -parameters "N = 4" 
+ compile -exact_map

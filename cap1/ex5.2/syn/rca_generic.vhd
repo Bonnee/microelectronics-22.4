@@ -53,8 +53,8 @@ BEGIN
   num2 <= unsigned(B);
   res <= ('0' & num1) + ('0' & num2) + resize('0' & Ci, res'length);
 
-  Co <= res(res'length - 1) ;
-  S <= STD_LOGIC_VECTOR(res(NUMBIT - 1 DOWNTO 0)) ;
+  Co <= res(res'length - 1);
+  S <= STD_LOGIC_VECTOR(res(NBIT - 1 DOWNTO 0));
 
   --  S <= (A + B) after DRCAS;
 

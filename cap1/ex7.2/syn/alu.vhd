@@ -20,6 +20,8 @@ begin
 P_ALU: process (FUNC, DATA1, DATA2)
   -- complete all the requested functions
 
+	-- we use the operation between std_logic_vector instead convert in unsigned because we are able to use IEEE.std_logic_unsigned.ALL library.
+
   begin
     case FUNC is
 	when ADD 		=> OUTALU <= DATA1 + DATA2; 
@@ -33,33 +35,13 @@ P_ALU: process (FUNC, DATA1, DATA2)
 	when FUNCRL 	=> OUTALU <= DATA1(N-2 downto 0) & DATA1(N-1); -- rotate left
 	when FUNCRR 	=> OUTALU <= DATA1(0) & DATA1(N-1 downto 1); -- rotate right
 	when others => null;
-	--when FUNCLSL 	=> OUTALU <= 
-    --                           (
-    --                              ( N-1 downto to_integer( unsigned(DATA2) ) )  => DATA1( to_integer(N-1-unsigned(DATA2)) downto 0 ) , 
-    --                              others=> ´0´
-    --                           ); -- logical shift left, HELP: use the          concatenation operator &
-	--when FUNCLSR 	=> OUTALU <= (
-    --                              others => '0', 
-    --                              (to_integer(unsigned(DATA2)-1) downto 0) => DATA1((unsigned(DATA2)-1 downto 0)
-    --                           );
-	--when FUNCRL 	=> OUTALU <= (
-    --                              ( N-1 downto to_integer( unsigned(DATA2) ) )  => DATA1( to_integer(N-1-unsigned(DATA2)) downto 0 ) , 
-    --                              ( N-1 downto to_integer(N-1-unsigned(DATA2)) )  => DATA1( to_integer(N-1-unsigned(DATA2)) downto 0 ) , 
-    --                              others=> ´0´
-    --                           ); -- logical shift left, HELP: use the          concatenation operator &
-	--when FUNCRR 	=> OUTALU <= (
-    --                              others => '0', 
-    --                              (to_integer(unsigned(DATA2)-1) downto 0) => DATA1((unsigned(DATA2)-1 downto 0)
-    --                           );
 
-	--when FUNCRL 	=> OUTALU <= DATA1 =\(N-1 downto N-unsigned(DATA2)) & DATA1(N-1-unsigned(DATA2) downto 0); -- rotate left
-	--when FUNCRR 	=> OUTALU <= DATA1 (N-1-unsigned(DATA2) downto 0) & DATA1(N-1 downto N-unsigned(DATA2)); -- rotate right    
+	-- here some example of implementation of shift/rotate commands with the number of position to be shifted
 
-	--when FUNCLSL 	=> OUTALU <= std_logic_vector( unsigned(DATA1) sll unsigned(DATA2) );
-	--when FUNCLSR 	=> OUTALU <= std_logic_vector( unsigned(DATA1) slr unsigned(DATA2) );
-	--when FUNCLSR 	=> OUTALU <= others=> ´0´ & DATA1(N-1 downto (unsigned(DATA2)) ); -- logical shift right
-	--when FUNCRL 	=> OUTALU <= DATA1 =\(N-1 downto N-unsigned(DATA2)) & DATA1(N-1-unsigned(DATA2) downto 0); -- rotate left
-	--when FUNCRR 	=> OUTALU <= DATA1 (N-1-unsigned(DATA2) downto 0) & DATA1(N-1 downto N-unsigned(DATA2)); -- rotate right    
+    -- WHEN FUNCLSL  => OUTALU <= std_logic_vector( SHIFT_LEFT(unsigned(DATA1), to_integer(unsigned(DATA2))) );
+    -- WHEN FUNCLSR  => OUTALU <= std_logic_vector( SHIFT_RIGHT(unsigned(DATA1), to_integer(unsigned(DATA2))) );
+    -- WHEN FUNCRL   => OUTALU <= std_logic_vector( ROTATE_LEFT(unsigned(DATA1),  to_integer(unsigned(DATA2))) ); -- rotate left
+    -- WHEN FUNCRR   => OUTALU <= std_logic_vector( ROTATE_RIGHT(unsigned(DATA1), to_integer(unsigned(DATA2))) ); -- rotate right
 	end case; 
 
   end process P_ALU;

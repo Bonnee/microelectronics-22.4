@@ -1,8 +1,0 @@
-You can run vsim
-Start time: 18:39:39 on Mar 14,2022
-vcom constants.vhd iv.vhd nd2.vhd mux21.vhd mux21_generic.vhd tb_mux21_generic.vhd 
-QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-** Error: (vcom-7) Failed to open design unit file "constants.vhd" in read mode.
-No such file or directory. (errno = ENOENT)
-End time: 18:39:39 on Mar 14,2022, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
