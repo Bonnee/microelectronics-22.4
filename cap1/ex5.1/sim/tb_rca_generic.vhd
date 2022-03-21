@@ -1,3 +1,22 @@
+--------------------------------------------------------------------------------
+-- Engineer: Simone Ruffini [simone.ruffini@tutanota.com]
+--           Matteo Bonora  [matteo.bonora@polito.it]
+-- 
+-- Create Date:     Mon Mar 14 22:21:59 CET 2022
+-- Design Name:     TB_RCA_GENERIC 
+-- Module Name:     mux21_generic.vhd
+-- Project Name:    
+-- Description:     
+--                  
+--
+-- Revision:
+-- Revision 00 - Simone Ruffini
+--  * File Created
+-- Revision 01 - Matteo Bonora
+--  * Updated to comply with lab std.s
+-- Additional Comments:
+--
+--------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL; -- we need a conversion to unsigned 

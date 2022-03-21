@@ -1,5 +1,6 @@
 --------------------------------------------------------------------------------
 -- Engineer:  Simone Ruffini [simone.ruffini@tutanota.com]
+--            Matteo Bonora [matteo.bonota@studenti.polito.it]
 --
 -- Create Date:     Wed Mar  9 23:20:11 CET 2022
 -- Design Name:     ACC
@@ -136,41 +137,6 @@ BEGIN
   --########################## PROCESSES #######################################
 END STRUCTURAL;
 
-ARCHITECTURE BEHAVIOURAL OF ACC IS
-
-  SIGNAL mux_out : STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-  SIGNAL out_add : STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-  SIGNAL feed_back : STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-
-  -- BEGIN RCA
-  SIGNAL num1 : unsigned(NBIT - 1 DOWNTO 0);
-  SIGNAL num2 : unsigned(NBIT - 1 DOWNTO 0);
-  -- END RCA
-  SIGNAL REG : STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-BEGIN
-
-  -- MUCS
-  MUX_OUT <= B WHEN ACCUMULATE = '1' ELSE
-    feed_back;
-
-  -- BEGIN RCA
-  num1 <= unsigned(A);
-  num2 <= unsigned(mux_out);
-  OUT_ADD <= STD_LOGIC_VECTOR(num1 + num2) AFTER DRCAS;
-  -- END RCA
-
-  U8_REG : PROCESS (CLK, RST_n)
-  BEGIN
-    IF (RST_n = '0') THEN
-      REG <= (OTHERS => '0');
-
-    ELSIF CLK'event AND CLK = '1' THEN
-      REG <= OUT_ADD;
-    END IF;
-  END PROCESS;
-
-  feed_back <= REG;
-END BEHAVIOURAL;
 CONFIGURATION CFG_ACC_STRUCTURAL OF ACC IS
   FOR STRUCTURAL
     FOR U1_REG : REG
@@ -180,12 +146,7 @@ CONFIGURATION CFG_ACC_STRUCTURAL OF ACC IS
       USE CONFIGURATION WORK.CFG_RCA_STRUCTURAL;
     END FOR;
     FOR U1_MUX : MUX21_GENERIC
-    USE CONFIGURATION WORK.CFG_MUX21_GENERIC_BEHAVIORAL;
+    USE CONFIGURATION WORK.CFG_MUX21_GENERIC_STRUCTURAL;
   END FOR;
 END FOR;
 END CFG_ACC_STRUCTURAL;
-
-CONFIGURATION CFG_ACC_BEHAVIOURAL OF ACC IS
-  FOR BEHAVIOURAL
-  END FOR;
-END CFG_ACC_BEHAVIOURAL;

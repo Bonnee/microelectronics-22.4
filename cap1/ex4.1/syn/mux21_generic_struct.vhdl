@@ -3,18 +3,18 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-package CONV_PACK_MUX21_GENERIC_NBIT10 is
+package CONV_PACK_MUX21_GENERIC_NBIT10_1 is
 
 -- define attributes
 attribute ENUM_ENCODING : STRING;
 
-end CONV_PACK_MUX21_GENERIC_NBIT10;
+end CONV_PACK_MUX21_GENERIC_NBIT10_1;
 
 library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_29 is
 
@@ -38,7 +38,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_28 is
 
@@ -62,7 +62,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_27 is
 
@@ -86,7 +86,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_26 is
 
@@ -110,7 +110,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_25 is
 
@@ -134,7 +134,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_24 is
 
@@ -158,7 +158,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_23 is
 
@@ -182,7 +182,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_22 is
 
@@ -206,7 +206,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_21 is
 
@@ -230,7 +230,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_20 is
 
@@ -254,7 +254,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_19 is
 
@@ -278,7 +278,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_18 is
 
@@ -302,7 +302,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_17 is
 
@@ -326,7 +326,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_16 is
 
@@ -350,7 +350,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_15 is
 
@@ -374,7 +374,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_14 is
 
@@ -398,7 +398,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_13 is
 
@@ -422,7 +422,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_12 is
 
@@ -446,7 +446,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_11 is
 
@@ -470,7 +470,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_10 is
 
@@ -494,7 +494,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_9 is
 
@@ -518,7 +518,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_8 is
 
@@ -542,7 +542,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_7 is
 
@@ -566,7 +566,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_6 is
 
@@ -590,7 +590,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_5 is
 
@@ -614,7 +614,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_4 is
 
@@ -638,7 +638,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_3 is
 
@@ -662,7 +662,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_2 is
 
@@ -686,7 +686,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_1 is
 
@@ -710,7 +710,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_9 is
 
@@ -734,7 +734,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_8 is
 
@@ -758,7 +758,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_7 is
 
@@ -782,7 +782,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_6 is
 
@@ -806,7 +806,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_5 is
 
@@ -830,7 +830,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_4 is
 
@@ -854,7 +854,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_3 is
 
@@ -878,7 +878,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_2 is
 
@@ -902,7 +902,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_1 is
 
@@ -926,7 +926,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_9 is
 
@@ -967,7 +967,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_8 is
 
@@ -1008,7 +1008,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_7 is
 
@@ -1049,7 +1049,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_6 is
 
@@ -1090,7 +1090,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_5 is
 
@@ -1131,7 +1131,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_4 is
 
@@ -1172,7 +1172,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_3 is
 
@@ -1213,7 +1213,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_2 is
 
@@ -1254,7 +1254,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_1 is
 
@@ -1295,7 +1295,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity ND2_0 is
 
@@ -1319,7 +1319,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity IV_0 is
 
@@ -1343,7 +1343,7 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
 entity MUX21_0 is
 
@@ -1384,16 +1384,16 @@ library IEEE;
 
 use IEEE.std_logic_1164.all;
 
-use work.CONV_PACK_MUX21_GENERIC_NBIT10.all;
+use work.CONV_PACK_MUX21_GENERIC_NBIT10_1.all;
 
-entity MUX21_GENERIC_NBIT10 is
+entity MUX21_GENERIC_NBIT10_1 is
 
    port( A, B : in std_logic_vector (9 downto 0);  SEL : in std_logic;  Y : out
          std_logic_vector (9 downto 0));
 
-end MUX21_GENERIC_NBIT10;
+end MUX21_GENERIC_NBIT10_1;
 
-architecture SYN_STRUCTURAL of MUX21_GENERIC_NBIT10 is
+architecture SYN_STRUCTURAL of MUX21_GENERIC_NBIT10_1 is
 
    component MUX21_1
       port( A, B, S : in std_logic;  Y : out std_logic);
