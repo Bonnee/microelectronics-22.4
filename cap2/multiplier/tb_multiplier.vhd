@@ -1,12 +1,11 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.ALL;
---USE WORK.constants.ALL;
 
 ENTITY MULTIPLIER_tb IS
 END MULTIPLIER_tb;
 ARCHITECTURE TEST OF MULTIPLIER_tb IS
-  CONSTANT numBit : INTEGER := 4; -- :=8  --:=16    
+  CONSTANT numBit : INTEGER := 8; -- :=8  --:=16    
 
   --  input	 
   SIGNAL A_mp_i : STD_LOGIC_VECTOR(numBit - 1 DOWNTO 0) := (OTHERS => '0');

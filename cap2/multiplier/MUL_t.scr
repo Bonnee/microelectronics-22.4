@@ -3,15 +3,16 @@
 # analyzing and checking vhdl netlist#
 # here the analyze command is used for each file from bottom to top #
 ##############################################################
-analyze -library WORK -format vhdl {constants.vhd}
+
 analyze -library WORK -format vhdl {fa.vhd}
-# fill these lines with your files ...
-analyze -library WORK -format vhdl {   }
-analyze -library WORK -format vhdl {   }
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/rca.vhd  }
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/boothenc.vhd  }
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/boothmul.vhd  }
+
 ##############################################################
 # elaborating the top entity -- here supposed BOOTHMUL#
 # choose the architecture you want
-elaborate BOOTHMUL -architecture STRUCTURAL 
+elaborate BOOTHMUL -architecture CFG_BOOTHMUL_MIXED -parameters "NBIT=32"
 ##########################################
 # first compilation, without constraints #
 compile 
