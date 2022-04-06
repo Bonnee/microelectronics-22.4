@@ -25,6 +25,8 @@ USE ieee.numeric_std.ALL;
 
 ENTITY RCA IS
   GENERIC (
+    DRCAS : TIME := 0 ns;
+    DRCAC : TIME := 0 ns;
     NBIT : INTEGER := 32 -- NumBit
   );
   PORT (
@@ -42,6 +44,10 @@ ARCHITECTURE STRUCTURAL OF RCA IS
   SIGNAL CTMP : STD_LOGIC_VECTOR(NBIT DOWNTO 0);
 
   COMPONENT FA
+    GENERIC (
+      DFAS : TIME := 0 ns;
+      DFAC : TIME := 0 ns
+    );
     PORT (
       A : IN STD_LOGIC;
       B : IN STD_LOGIC;
@@ -59,6 +65,7 @@ BEGIN
 
   GEN_ADDER1 : FOR I IN 1 TO (NBIT) GENERATE
     FAI : FA
+    GENERIC MAP(DFAS => DRCAS, DFAC => DRCAC)
     PORT MAP(A(I - 1), B(I - 1), CTMP(I - 1), STMP(I - 1), CTMP(I));
   END GENERATE;
 
@@ -73,28 +80,12 @@ BEGIN
   num2 <= unsigned(B);
   res <= ('0' & num1) + ('0' & num2) + resize('0' & Ci, res'length);
 
-  Co <= res(res'length - 1);
-  S <= STD_LOGIC_VECTOR(res(NBIT - 1 DOWNTO 0));
+  Co <= res(res'length - 1) AFTER DRCAC;
+  S <= STD_LOGIC_VECTOR(res(NBIT - 1 DOWNTO 0)) AFTER DRCAS;
 
   --  S <= (A + B) after DRCAS;
 
 END BEHAVIORAL;
-
-ARCHITECTURE DIRECT OF RCA IS
-  SIGNAL num1 : unsigned(A'length - 1 DOWNTO 0);
-  SIGNAL num2 : unsigned(B'length - 1 DOWNTO 0);
-  SIGNAL res : unsigned(S'length DOWNTO 0); -- one extra bit
-BEGIN
-  num1 <= unsigned(A);
-  num2 <= unsigned(B);
-  --res <= ('0' & num1) + ('0' & num2) + resize('0' & Ci, res'length);
-
-  Co <= '0'; --res(res'length - 1) AFTER DRCAC;
-  --S <= STD_LOGIC_VECTOR(res(NBIT - 1 DOWNTO 0)) AFTER DRCAS;
-
-  S <= STD_LOGIC_VECTOR(num1 + num2);
-
-END DIRECT;
 
 CONFIGURATION CFG_RCA_STRUCTURAL OF RCA IS
   FOR STRUCTURAL
@@ -110,8 +101,3 @@ CONFIGURATION CFG_RCA_BEHAVIORAL OF RCA IS
   FOR BEHAVIORAL
   END FOR;
 END CFG_RCA_BEHAVIORAL;
-
-CONFIGURATION CFG_RCA_DIRECT OF RCA IS
-  FOR DIRECT
-  END FOR;
-END CFG_RCA_DIRECT;

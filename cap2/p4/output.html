@@ -1,0 +1,139 @@
+<html> <head>
+  <title>
+    output.vhd
+  </title>
+</head>
+
+<body>
+  <h1>output.vhd</h1>
+<pre>
+<font size=-1>    1</font> <font color=green>--------------------------------------------------------------------------------</font>
+<font size=-1>    2</font> <font color=green>-- Engineer: Simone Ruffini [simone.ruffini@studenti.polito.it]</font>
+<font size=-1>    3</font> <font color=green>-- </font>
+<font size=-1>    4</font> <font color=green>-- Create Date:     Thu Mar 24 10:31:29 CET 2022</font>
+<font size=-1>    5</font> <font color=green>-- Design Name:     Carry Generator</font>
+<font size=-1>    6</font> <font color=green>-- Module Name:     carry_generator.vhd</font>
+<font size=-1>    7</font> <font color=green>-- Project Name:    P4 adder</font>
+<font size=-1>    8</font> <font color=green>-- Description:     </font>
+<font size=-1>    9</font> <font color=green>--                  </font>
+<font size=-1>   10</font> <font color=green>--</font>
+<font size=-1>   11</font> <font color=green>-- Revision:</font>
+<font size=-1>   12</font> <font color=green>-- Revision 00 - Simone Ruffini</font>
+<font size=-1>   13</font> <font color=green>--  * Created</font>
+<font size=-1>   14</font> <font color=green>-- Additional Comments:</font>
+<font size=-1>   15</font> <font color=green>--</font>
+<font size=-1>   16</font> <font color=green>--------------------------------------------------------------------------------</font>
+<font size=-1>   17</font> <font color=red>library</font> ieee;
+<font size=-1>   18</font> <font color=red>use</font> ieee.std_logic_1164.<font color=red>all</font>;
+<font size=-1>   19</font> <font color=red>use</font> ieee.numeric_std.<font color=red>all</font>;
+<font size=-1>   20</font> <font color=red>use</font> ieee.math_real.<font color=red>all</font>;
+<font size=-1>   21</font> 
+<font size=-1>   22</font> <font color=red>library</font> WORK;
+<font size=-1>   23</font> <font color=red>use</font> work.comm_pkg.<font color=red>all</font>;
+<font size=-1>   24</font> 
+<font size=-1>   25</font> <font color=red>entity</font> CARRY_GENERATOR <font color=red>is</font>
+<font size=-1>   26</font>   <font color=red>generic</font> (
+<font size=-1>   27</font>     NBIT : INTEGER := 32;
+<font size=-1>   28</font>     NBIT_PER_BLOCK : INTEGER := 4
+<font size=-1>   29</font>   );
+<font size=-1>   30</font>   <font color=red>port</font> (
+<font size=-1>   31</font>     A : <font color=red>in</font> STD_LOGIC_VECTOR(NBIT - 1 <font color=red>downto</font> 0);
+<font size=-1>   32</font>     B : <font color=red>in</font> STD_LOGIC_VECTOR(NBIT - 1 <font color=red>downto</font> 0);
+<font size=-1>   33</font>     Cin : <font color=red>in</font> STD_LOGIC;
+<font size=-1>   34</font>     Co : <font color=red>out</font> STD_LOGIC_VECTOR((NBIT/NBIT_PER_BLOCK) - 1 <font color=red>downto</font> 0)
+<font size=-1>   35</font>   );
+<font size=-1>   36</font> <font color=red>end</font> CARRY_GENERATOR;
+<font size=-1>   37</font> 
+<font size=-1>   38</font> 
+<font size=-1>   39</font> <font color=red>architecture</font> STRUCTURAL <font color=red>of</font> CARRY_GENERATOR <font color=red>is</font>
+<font size=-1>   40</font> 
+<font size=-1>   41</font>   <font color=red>constant</font> log_nbit : natural := integer(log2(real(NBIT)));
+<font size=-1>   42</font> 
+<font size=-1>   43</font>   <font color=red>signal</font> CG_xbars   : crossbar_t (log_nbit - 1 <font color=red>downto</font> 0, (2*NBIT)-1 <font color=red>downto</font> 0); <font color=green>-- carry generator crossbars</font>
+<font size=-1>   44</font>   <font color=red>signal</font> g_prim_vec : STD_LOGIC_VECTOR(NBIT-1 <font color=red>downto</font> 0);
+<font size=-1>   45</font>   <font color=red>signal</font> p_prim_vec : STD_LOGIC_VECTOR(NBIT-1 <font color=red>downto</font> 0);
+<font size=-1>   46</font> 
+<font size=-1>   47</font> <font color=red>begin</font>
+<font size=-1>   48</font> 
+<font size=-1>   49</font>   <font color=green>-- Asserts compliance of the inputs </font>
+<font size=-1>   50</font>   TEST_GENERIC_PROCEDURE : assert_bits( BIT_WIDTH =&gt; NBIT , CARRY_STEP =&gt; NBIT_PER_BLOCK );
+<font size=-1>   51</font> 
+<font size=-1>   52</font>   GEN_PG_PRIM_NET : <font color=red>for</font> I <font color=red>in</font> 0 <font color=red>to</font> NBIT - 1 <font color=red>generate</font>
+<font size=-1>   53</font>     U_PG_PRIM_I : <font color=red>entity</font> work.PG_PRIM
+<font size=-1>   54</font>       <font color=red>port</font> <font color=red>map</font> (
+<font size=-1>   55</font>         A =&gt; A(i),
+<font size=-1>   56</font>         B =&gt; B(i),
+<font size=-1>   57</font>         g =&gt; CG_xbars(0,i)(g_idx),
+<font size=-1>   58</font>         p =&gt; CG_xbars(0,i)(p_idx)
+<font size=-1>   59</font>         );
+<font size=-1>   60</font>   <font color=red>end</font> <font color=red>generate</font> GEN_PG_PRIM_NET;
+<font size=-1>   61</font> 
+<font size=-1>   62</font>   <font color=green>-- The tree must contain at least a balanced binary tree of hight log2(NBIT)</font>
+<font size=-1>   63</font>   GEN_CARRY_NET : <font color=red>for</font> i <font color=red>in</font> 1 <font color=red>to</font> log_nbit <font color=red>generate</font> <font color=green>-- first line is already done by GEN_CARRY_NET</font>
+<font size=-1>   64</font> 
+<font size=-1>   65</font>     <font color=red>signal</font> row_tot_nodes : integer := 0;
+<font size=-1>   66</font> 
+<font size=-1>   67</font>     <font color=red>begin</font>
+<font size=-1>   68</font> 
+<font size=-1>   69</font>       row_tot_nodes &lt;= (2 ** (log_nbit-I));
+<font size=-1>   70</font> 
+<font size=-1>   71</font>       GEN_ROW_i_OF_PRFX_OP: <font color=red>for</font> j <font color=red>in</font> 0 <font color=red>to</font> log_nbit - 1 <font color=red>generate</font>
+<font size=-1>   72</font> 
+<font size=-1>   73</font>         GEN_PRFX_OP: <font color=red>if</font> (j <font color=red>mod</font> (2 ** i)) = 0 <font color=red>generate</font>
+<font size=-1>   74</font> 
+<font size=-1>   75</font>           <font color=green>-- all nodes in theory could be PG_PRFX_OP nodes but it would be useless for the first rightmost ones.</font>
+<font size=-1>   76</font>           <font color=green>-- the P value wouldn't be used because this nodes will generate the full carry till this point so G_PRFX_OP is</font>
+<font size=-1>   77</font>           <font color=green>-- enough to get that value</font>
+<font size=-1>   78</font>           GEN_START_WITH_G_PRFX_OP: <font color=red>if</font> j = ((2 ** i) - 1) <font color=red>generate</font>
+<font size=-1>   79</font>             U_G_PRFX_OP_i_j: <font color=red>entity</font> work.G_PRFX_OP
+<font size=-1>   80</font>               <font color=red>port</font> <font color=red>map</font>(
+<font size=-1>   81</font>                 G_current =&gt; CG_xbars(i-1,j)(g_idx),
+<font size=-1>   82</font>                 P_current =&gt; CG_xbars(i-1,j)(p_idx),
+<font size=-1>   83</font>                 G_prev    =&gt; CG_xbars(i-1,j-1)(g_idx),
+<font size=-1>   84</font>                 G         =&gt; CG_xbars(i,j)(g_idx)
+<font size=-1>   85</font>                 );
+<font size=-1>   86</font>           <font color=red>end</font> <font color=red>generate</font> GEN_START_WITH_G_PRFX_OP; <font color=green>-- END if j = ((2 ** i) - 1) generate </font>
+<font size=-1>   87</font> 
+<font size=-1>   88</font>           GEN_OTHER_NODES: <font color=red>if</font> j &gt; ((2 ** i) - 1) <font color=red>generate</font>
+<font size=-1>   89</font>             U_PG_PRFX_OP_i_j: <font color=red>entity</font> work.PG_PRFX_OP
+<font size=-1>   90</font>               <font color=red>port</font> <font color=red>map</font>(
+<font size=-1>   91</font>                 G_current =&gt; CG_xbars(i-1,j)(g_idx),
+<font size=-1>   92</font>                 P_current =&gt; CG_xbars(i-1,j)(p_idx),
+<font size=-1>   93</font>                 G_prev    =&gt; CG_xbars(i-1,j-1)(g_idx),
+<font size=-1>   94</font>                 P_prev    =&gt; CG_xbars(i-1,j-1)(p_idx),
+<font size=-1>   95</font>                 G         =&gt; CG_xbars(i,j)(g_idx),
+<font size=-1>   96</font>                 p         =&gt; CG_xbars(i,j)(p_idx)
+<font size=-1>   97</font>                 );
+<font size=-1>   98</font> 
+<font size=-1>   99</font>           <font color=red>end</font> <font color=red>generate</font> GEN_OTHER_NODES; <font color=green>-- END if j &gt; ((2 ** i) - 1) generate</font>
+<font size=-1>  100</font> 
+<font size=-1>  101</font>         <font color=red>end</font> <font color=red>generate</font> GEN_PRFX_OP; <font color=green>-- END if (j mod (2 ** i)) = 0 generate</font>
+<font size=-1>  102</font> 
+<font size=-1>  103</font>       <font color=red>end</font> <font color=red>generate</font> GEN_ROW_i_OF_PRFX_OP; <font color=green>-- END if (j mod (2 ** i)) = 0 generate</font>
+<font size=-1>  104</font> 
+<font size=-1>  105</font>   <font color=red>end</font> <font color=red>generate</font> GEN_CARRY_NET;
+<font size=-1>  106</font> 
+<font size=-1>  107</font> <font color=red>end</font> STRUCTURAL;
+<font size=-1>  108</font> 
+<font size=-1>  109</font> 
+<font size=-1>  110</font> <font color=red>architecture</font> BEHAVIORAL <font color=red>of</font> CARRY_GENERATOR <font color=red>is</font>
+<font size=-1>  111</font> <font color=red>begin</font>
+<font size=-1>  112</font> <font color=red>end</font> BEHAVIORAL;
+<font size=-1>  113</font> 
+<font size=-1>  114</font> <font color=red>configuration</font> CFG_RCA_STRUCTURAL <font color=red>of</font> CARRY_GENERATOR <font color=red>is</font>
+<font size=-1>  115</font>   <font color=red>for</font> STRUCTURAL
+<font size=-1>  116</font>   <font color=red>end</font> <font color=red>for</font>;
+<font size=-1>  117</font> <font color=red>end</font> CFG_RCA_STRUCTURAL;
+<font size=-1>  118</font> 
+<font size=-1>  119</font> <font color=red>configuration</font> CFG_RCA_BEHAVIORAL <font color=red>of</font> CARRY_GENERATOR <font color=red>is</font>
+<font size=-1>  120</font>   <font color=red>for</font> BEHAVIORAL
+<font size=-1>  121</font>   <font color=red>end</font> <font color=red>for</font>;
+<font size=-1>  122</font> <font color=red>end</font> CFG_RCA_BEHAVIORAL;
+<font size=-1>  123</font> 
+</pre>
+<hr/>
+<p>
+<small>This page was generated using <a href="http://ghdl.free.fr">GHDL 1.0.0 (tarball) [Dunoon edition]</a>, a program written by Tristan Gingold
+</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+  Startpoint: B[0] (input port)
+    Endpoint: S[15] (output port)
+      Path Group: (none)
+        Path Type: max
+
+          Des/Clust/Port     Wire Load Model       Library
+            ------------------------------------------------
+              BOOTHMUL_NBIT8     5K_hvratio_1_1        NangateOpenCellLibrary
+
+                Point                                                   Incr       Path
+                  --------------------------------------------------------------------------
+                    input external delay                                    0.00       0.00 r
+                      B[0] (in)                                               0.00       0.00 r
+                        ENC1/B[0] (BOOTHENC_NBIT10_i0)                          0.00       0.00 r
+                          ENC1/U37/ZN (INV_X1)                                    0.02       0.02 f
+                            ENC1/U36/ZN (NOR2_X1)                                   0.15       0.17 r
+                              ENC1/U35/ZN (NOR2_X1)                                   0.04       0.21 f
+                                ENC1/U34/ZN (INV_X1)                                    0.08       0.29 r
+                                  ENC1/U24/ZN (OAI221_X1)                                 0.06       0.35 f
+                                    ENC1/O[2] (BOOTHENC_NBIT10_i0)                          0.00       0.35 f
+                                      ADDER1/A[2] (RCA_NBIT12)                                0.00       0.35 f
+                                        ADDER1/add_95/A[2] (RCA_NBIT12_DW01_add_0)              0.00       0.35 f
+                                          ADDER1/add_95/U1_2/CO (FA_X1)                           0.10       0.46 f
+                                            ADDER1/add_95/U1_3/CO (FA_X1)                           0.09       0.55 f
+                                              ADDER1/add_95/U1_4/CO (FA_X1)                           0.09       0.64 f
+                                                ADDER1/add_95/U1_5/CO (FA_X1)                           0.09       0.73 f
+                                                  ADDER1/add_95/U1_6/CO (FA_X1)                           0.09       0.82 f
+                                                    ADDER1/add_95/U1_7/CO (FA_X1)                           0.09       0.91 f
+                                                      ADDER1/add_95/U1_8/CO (FA_X1)                           0.09       1.00 f
+                                                        ADDER1/add_95/U1_9/CO (FA_X1)                           0.09       1.09 f
+                                                          ADDER1/add_95/U1_10/CO (FA_X1)                          0.09       1.18 f
+                                                            ADDER1/add_95/U1_11/S (FA_X1)                           0.13       1.31 f
+                                                              ADDER1/add_95/SUM[11] (RCA_NBIT12_DW01_add_0)           0.00       1.31 f
+                                                                ADDER1/S[11] (RCA_NBIT12)                               0.00       1.31 f
+                                                                  ADDER_2/A[11] (RCA_NBIT14)                              0.00       1.31 f
+                                                                    ADDER_2/add_95/A[11] (RCA_NBIT14_DW01_add_0)            0.00       1.31 f
+                                                                      ADDER_2/add_95/U1_11/CO (FA_X1)                         0.11       1.43 f
+                                                                        ADDER_2/add_95/U1_12/CO (FA_X1)                         0.09       1.52 f
+                                                                          ADDER_2/add_95/U1_13/S (FA_X1)                          0.13       1.65 f
+                                                                            ADDER_2/add_95/SUM[13] (RCA_NBIT14_DW01_add_0)          0.00       1.65 f
+                                                                              ADDER_2/S[13] (RCA_NBIT14)                              0.00       1.65 f
+                                                                                ADDER_3/A[13] (RCA_NBIT16)                              0.00       1.65 f
+                                                                                  ADDER_3/add_95/A[13] (RCA_NBIT16_DW01_add_0)            0.00       1.65 f
+                                                                                    ADDER_3/add_95/U1_13/CO (FA_X1)                         0.11       1.77 f
+                                                                                      ADDER_3/add_95/U1_14/CO (FA_X1)                         0.09       1.86 f
+                                                                                        ADDER_3/add_95/U1_15/S (FA_X1)                          0.13       1.99 r
+                                                                                          ADDER_3/add_95/SUM[15] (RCA_NBIT16_DW01_add_0)          0.00       1.99 r
+                                                                                            ADDER_3/S[15] (RCA_NBIT16)                              0.00       1.99 r
+                                                                                              S[15] (out)                                             0.00       1.99 r
+                                                                                                data arrival time                                                  1.99
+                                                                                                  --------------------------------------------------------------------------
+                                                                                                    (Path is unconstrained)

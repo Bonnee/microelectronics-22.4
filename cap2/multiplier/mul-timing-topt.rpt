@@ -1,0 +1,282 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BOOTHMUL_NBIT32
+Version: F-2011.09-SP3
+Date   : Wed Apr  6 23:22:25 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: A[1] (input port)
+  Endpoint: S[63] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BOOTHMUL_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[1] (in)                                               0.00       0.00 f
+  sub_101/B[1] (BOOTHMUL_NBIT32_DW01_sub_0)               0.00       0.00 f
+  sub_101/U3/ZN (NOR2_X1)                                 0.05       0.05 r
+  sub_101/U2/ZN (XNOR2_X1)                                0.06       0.11 r
+  sub_101/DIFF[2] (BOOTHMUL_NBIT32_DW01_sub_0)            0.00       0.11 r
+  ENC1/A_ns[2] (BOOTHENC_NBIT34_i0)                       0.00       0.11 r
+  ENC1/U17/ZN (INV_X1)                                    0.03       0.14 f
+  ENC1/U14/ZN (OAI221_X1)                                 0.06       0.20 r
+  ENC1/O[2] (BOOTHENC_NBIT34_i0)                          0.00       0.20 r
+  ADDER1/A[2] (RCA_NBIT36)                                0.00       0.20 r
+  ADDER1/add_95/A[2] (RCA_NBIT36_DW01_add_0)              0.00       0.20 r
+  ADDER1/add_95/U55/ZN (AOI21_X1)                         0.04       0.24 f
+  ADDER1/add_95/U43/ZN (OR2_X1)                           0.07       0.31 f
+  ADDER1/add_95/U40/ZN (OAI21_X1)                         0.06       0.37 r
+  ADDER1/add_95/U67/ZN (AOI21_X1)                         0.04       0.41 f
+  ADDER1/add_95/U27/ZN (NOR2_X1)                          0.04       0.45 r
+  ADDER1/add_95/U26/ZN (NAND2_X1)                         0.03       0.48 f
+  ADDER1/add_95/U59/ZN (NAND2_X1)                         0.03       0.51 r
+  ADDER1/add_95/U229/ZN (AOI21_X1)                        0.03       0.54 f
+  ADDER1/add_95/U228/ZN (INV_X1)                          0.03       0.58 r
+  ADDER1/add_95/U147/ZN (NAND2_X1)                        0.03       0.61 f
+  ADDER1/add_95/U182/ZN (XNOR2_X1)                        0.06       0.66 f
+  ADDER1/add_95/SUM[7] (RCA_NBIT36_DW01_add_0)            0.00       0.66 f
+  ADDER1/S[7] (RCA_NBIT36)                                0.00       0.66 f
+  ADDER_2/A[7] (RCA_NBIT38)                               0.00       0.66 f
+  ADDER_2/add_95/A[7] (RCA_NBIT38_DW01_add_0)             0.00       0.66 f
+  ADDER_2/add_95/U118/Z (BUF_X1)                          0.04       0.71 f
+  ADDER_2/add_95/U127/ZN (XNOR2_X1)                       0.06       0.76 f
+  ADDER_2/add_95/U126/ZN (XNOR2_X1)                       0.06       0.82 f
+  ADDER_2/add_95/SUM[7] (RCA_NBIT38_DW01_add_0)           0.00       0.82 f
+  ADDER_2/S[7] (RCA_NBIT38)                               0.00       0.82 f
+  ADDER_3/A[7] (RCA_NBIT40)                               0.00       0.82 f
+  ADDER_3/add_95/A[7] (RCA_NBIT40_DW01_add_0)             0.00       0.82 f
+  ADDER_3/add_95/U188/ZN (OAI21_X1)                       0.05       0.87 r
+  ADDER_3/add_95/U175/ZN (OAI21_X1)                       0.04       0.91 f
+  ADDER_3/add_95/U207/ZN (AOI21_X1)                       0.04       0.95 r
+  ADDER_3/add_95/U213/ZN (INV_X1)                         0.02       0.97 f
+  ADDER_3/add_95/U212/ZN (OAI21_X1)                       0.04       1.01 r
+  ADDER_3/add_95/U206/ZN (INV_X1)                         0.02       1.03 f
+  ADDER_3/add_95/U209/ZN (OAI21_X1)                       0.04       1.07 r
+  ADDER_3/add_95/U116/ZN (OAI21_X1)                       0.04       1.12 f
+  ADDER_3/add_95/U114/Z (BUF_X1)                          0.04       1.16 f
+  ADDER_3/add_95/U164/ZN (XNOR2_X1)                       0.06       1.22 f
+  ADDER_3/add_95/SUM[10] (RCA_NBIT40_DW01_add_0)          0.00       1.22 f
+  ADDER_3/S[10] (RCA_NBIT40)                              0.00       1.22 f
+  ADDER_4/A[10] (RCA_NBIT42)                              0.00       1.22 f
+  ADDER_4/add_95/A[10] (RCA_NBIT42_DW01_add_0)            0.00       1.22 f
+  ADDER_4/add_95/U99/ZN (OAI21_X1)                        0.05       1.26 r
+  ADDER_4/add_95/U105/ZN (NAND2_X1)                       0.04       1.30 f
+  ADDER_4/add_95/U106/ZN (XNOR2_X1)                       0.06       1.37 f
+  ADDER_4/add_95/U109/ZN (XNOR2_X1)                       0.06       1.42 f
+  ADDER_4/add_95/SUM[11] (RCA_NBIT42_DW01_add_0)          0.00       1.42 f
+  ADDER_4/S[11] (RCA_NBIT42)                              0.00       1.42 f
+  ADDER_5/A[11] (RCA_NBIT44)                              0.00       1.42 f
+  ADDER_5/add_95/A[11] (RCA_NBIT44_DW01_add_0)            0.00       1.42 f
+  ADDER_5/add_95/U201/ZN (XNOR2_X1)                       0.06       1.49 f
+  ADDER_5/add_95/U245/ZN (OAI22_X1)                       0.06       1.55 r
+  ADDER_5/add_95/U1_12/S (FA_X1)                          0.13       1.67 f
+  ADDER_5/add_95/SUM[12] (RCA_NBIT44_DW01_add_0)          0.00       1.67 f
+  ADDER_5/S[12] (RCA_NBIT44)                              0.00       1.67 f
+  ADDER_6/A[12] (RCA_NBIT46)                              0.00       1.67 f
+  ADDER_6/add_95/A[12] (RCA_NBIT46_DW01_add_0)            0.00       1.67 f
+  ADDER_6/add_95/U274/ZN (AOI21_X1)                       0.05       1.72 r
+  ADDER_6/add_95/U164/ZN (NOR2_X1)                        0.03       1.75 f
+  ADDER_6/add_95/U194/Z (BUF_X1)                          0.04       1.79 f
+  ADDER_6/add_95/U26/ZN (NOR2_X1)                         0.04       1.82 r
+  ADDER_6/add_95/U27/ZN (NOR2_X1)                         0.02       1.85 f
+  ADDER_6/add_95/U276/ZN (AND2_X1)                        0.04       1.89 f
+  ADDER_6/add_95/U157/ZN (OAI22_X1)                       0.05       1.94 r
+  ADDER_6/add_95/U261/ZN (INV_X1)                         0.02       1.97 f
+  ADDER_6/add_95/U260/ZN (OAI21_X1)                       0.04       2.01 r
+  ADDER_6/add_95/U149/ZN (NAND2_X1)                       0.04       2.04 f
+  ADDER_6/add_95/U128/ZN (AOI21_X1)                       0.05       2.09 r
+  ADDER_6/add_95/U126/ZN (INV_X1)                         0.03       2.11 f
+  ADDER_6/add_95/U127/ZN (AND2_X1)                        0.04       2.15 f
+  ADDER_6/add_95/U131/ZN (OAI21_X1)                       0.04       2.19 r
+  ADDER_6/add_95/U41/ZN (NAND2_X1)                        0.04       2.23 f
+  ADDER_6/add_95/U110/ZN (AOI21_X1)                       0.05       2.28 r
+  ADDER_6/add_95/U23/ZN (NOR2_X1)                         0.03       2.32 f
+  ADDER_6/add_95/U79/ZN (OAI21_X1)                        0.04       2.36 r
+  ADDER_6/add_95/U40/ZN (NAND2_X1)                        0.03       2.40 f
+  ADDER_6/add_95/U75/ZN (AOI21_X1)                        0.04       2.44 r
+  ADDER_6/add_95/U73/ZN (INV_X1)                          0.03       2.46 f
+  ADDER_6/add_95/U72/ZN (AND2_X1)                         0.04       2.50 f
+  ADDER_6/add_95/U67/ZN (AOI21_X1)                        0.04       2.54 r
+  ADDER_6/add_95/U68/ZN (NOR2_X1)                         0.03       2.57 f
+  ADDER_6/add_95/U61/ZN (AOI21_X1)                        0.04       2.61 r
+  ADDER_6/add_95/U59/ZN (INV_X1)                          0.03       2.64 f
+  ADDER_6/add_95/U58/ZN (OAI21_X1)                        0.04       2.67 r
+  ADDER_6/add_95/U57/ZN (INV_X1)                          0.02       2.69 f
+  ADDER_6/add_95/U53/ZN (OAI21_X1)                        0.04       2.73 r
+  ADDER_6/add_95/U52/ZN (NAND2_X1)                        0.03       2.77 f
+  ADDER_6/add_95/U51/ZN (AOI21_X1)                        0.04       2.81 r
+  ADDER_6/add_95/U272/ZN (INV_X1)                         0.03       2.84 f
+  ADDER_6/add_95/U171/ZN (AND2_X1)                        0.04       2.88 f
+  ADDER_6/add_95/U98/ZN (AOI21_X1)                        0.04       2.92 r
+  ADDER_6/add_95/U97/ZN (NOR2_X1)                         0.02       2.95 f
+  ADDER_6/add_95/U94/ZN (OAI21_X1)                        0.04       2.99 r
+  ADDER_6/add_95/U92/ZN (INV_X1)                          0.03       3.01 f
+  ADDER_6/add_95/U24/ZN (OR2_X1)                          0.06       3.07 f
+  ADDER_6/add_95/U88/ZN (OAI21_X1)                        0.04       3.12 r
+  ADDER_6/add_95/U91/ZN (NAND2_X1)                        0.03       3.15 f
+  ADDER_6/add_95/U103/ZN (AOI21_X1)                       0.05       3.20 r
+  ADDER_6/add_95/U144/ZN (NOR2_X1)                        0.03       3.23 f
+  ADDER_6/add_95/U228/ZN (OAI21_X1)                       0.04       3.27 r
+  ADDER_6/add_95/U143/ZN (NAND2_X1)                       0.03       3.31 f
+  ADDER_6/add_95/U267/ZN (AOI21_X1)                       0.04       3.35 r
+  ADDER_6/add_95/U239/ZN (INV_X1)                         0.03       3.38 f
+  ADDER_6/add_95/U16/ZN (AND2_X1)                         0.04       3.42 f
+  ADDER_6/add_95/U252/ZN (XNOR2_X1)                       0.06       3.48 f
+  ADDER_6/add_95/SUM[31] (RCA_NBIT46_DW01_add_0)          0.00       3.48 f
+  ADDER_6/S[31] (RCA_NBIT46)                              0.00       3.48 f
+  ADDER_7/A[31] (RCA_NBIT48)                              0.00       3.48 f
+  ADDER_7/add_95/A[31] (RCA_NBIT48_DW01_add_0)            0.00       3.48 f
+  ADDER_7/add_95/U59/ZN (XNOR2_X1)                        0.06       3.54 f
+  ADDER_7/add_95/U61/ZN (XNOR2_X1)                        0.07       3.61 f
+  ADDER_7/add_95/SUM[31] (RCA_NBIT48_DW01_add_0)          0.00       3.61 f
+  ADDER_7/S[31] (RCA_NBIT48)                              0.00       3.61 f
+  ADDER_8/A[31] (RCA_NBIT50)                              0.00       3.61 f
+  ADDER_8/add_95/A[31] (RCA_NBIT50_DW01_add_0)            0.00       3.61 f
+  ADDER_8/add_95/U212/ZN (OR2_X1)                         0.06       3.67 f
+  ADDER_8/add_95/U215/ZN (AOI22_X1)                       0.06       3.73 r
+  ADDER_8/add_95/U211/ZN (INV_X1)                         0.02       3.75 f
+  ADDER_8/add_95/U205/ZN (AOI21_X1)                       0.04       3.79 r
+  ADDER_8/add_95/U225/ZN (INV_X1)                         0.03       3.82 f
+  ADDER_8/add_95/U224/ZN (OAI21_X1)                       0.04       3.86 r
+  ADDER_8/add_95/U177/ZN (INV_X1)                         0.02       3.88 f
+  ADDER_8/add_95/U221/ZN (AOI21_X1)                       0.04       3.92 r
+  ADDER_8/add_95/U174/ZN (NOR2_X1)                        0.03       3.94 f
+  ADDER_8/add_95/U232/ZN (AND2_X1)                        0.04       3.98 f
+  ADDER_8/add_95/U231/ZN (OAI22_X1)                       0.05       4.04 r
+  ADDER_8/add_95/U138/ZN (INV_X1)                         0.02       4.06 f
+  ADDER_8/add_95/U234/ZN (OAI21_X1)                       0.04       4.10 r
+  ADDER_8/add_95/U233/ZN (OAI21_X1)                       0.04       4.14 f
+  ADDER_8/add_95/U207/ZN (AOI21_X1)                       0.05       4.19 r
+  ADDER_8/add_95/U228/ZN (INV_X1)                         0.02       4.21 f
+  ADDER_8/add_95/U28/ZN (AND2_X1)                         0.04       4.25 f
+  ADDER_8/add_95/U99/ZN (OAI21_X1)                        0.04       4.29 r
+  ADDER_8/add_95/U97/ZN (OAI21_X1)                        0.04       4.33 f
+  ADDER_8/add_95/U98/ZN (AOI21_X1)                        0.04       4.37 r
+  ADDER_8/add_95/U194/ZN (INV_X1)                         0.03       4.40 f
+  ADDER_8/add_95/U95/ZN (OAI21_X1)                        0.04       4.43 r
+  ADDER_8/add_95/U147/ZN (INV_X1)                         0.03       4.46 f
+  ADDER_8/add_95/U213/ZN (OAI21_X1)                       0.04       4.50 r
+  ADDER_8/add_95/U146/ZN (NAND2_X1)                       0.03       4.53 f
+  ADDER_8/add_95/U209/ZN (OAI21_X1)                       0.04       4.57 r
+  ADDER_8/add_95/U29/ZN (NAND2_X1)                        0.03       4.60 f
+  ADDER_8/add_95/U1_41/CO (FA_X1)                         0.09       4.69 f
+  ADDER_8/add_95/U1_42/CO (FA_X1)                         0.09       4.78 f
+  ADDER_8/add_95/U1_43/CO (FA_X1)                         0.09       4.88 f
+  ADDER_8/add_95/U1_44/S (FA_X1)                          0.14       5.01 r
+  ADDER_8/add_95/SUM[44] (RCA_NBIT50_DW01_add_0)          0.00       5.01 r
+  ADDER_8/S[44] (RCA_NBIT50)                              0.00       5.01 r
+  ADDER_9/A[44] (RCA_NBIT52)                              0.00       5.01 r
+  ADDER_9/add_95/A[44] (RCA_NBIT52_DW01_add_0)            0.00       5.01 r
+  ADDER_9/add_95/U22/Z (BUF_X1)                           0.04       5.05 r
+  ADDER_9/add_95/U89/ZN (INV_X1)                          0.02       5.08 f
+  ADDER_9/add_95/U2/ZN (AND2_X2)                          0.04       5.12 f
+  ADDER_9/add_95/U90/ZN (NOR2_X1)                         0.04       5.16 r
+  ADDER_9/add_95/U204/ZN (XNOR2_X1)                       0.07       5.23 r
+  ADDER_9/add_95/SUM[45] (RCA_NBIT52_DW01_add_0)          0.00       5.23 r
+  ADDER_9/S[45] (RCA_NBIT52)                              0.00       5.23 r
+  ADDER_10/A[45] (RCA_NBIT54)                             0.00       5.23 r
+  ADDER_10/add_95/A[45] (RCA_NBIT54_DW01_add_0)           0.00       5.23 r
+  ADDER_10/add_95/U209/ZN (XNOR2_X1)                      0.07       5.30 r
+  ADDER_10/add_95/U220/ZN (XNOR2_X1)                      0.07       5.37 r
+  ADDER_10/add_95/SUM[45] (RCA_NBIT54_DW01_add_0)         0.00       5.37 r
+  ADDER_10/S[45] (RCA_NBIT54)                             0.00       5.37 r
+  ADDER_11/A[45] (RCA_NBIT56)                             0.00       5.37 r
+  ADDER_11/add_95/A[45] (RCA_NBIT56_DW01_add_0)           0.00       5.37 r
+  ADDER_11/add_95/U80/ZN (OAI21_X1)                       0.04       5.41 f
+  ADDER_11/add_95/U78/ZN (INV_X1)                         0.03       5.44 r
+  ADDER_11/add_95/U77/ZN (AOI21_X1)                       0.03       5.47 f
+  ADDER_11/add_95/U66/ZN (NOR2_X1)                        0.04       5.51 r
+  ADDER_11/add_95/U65/ZN (OAI21_X1)                       0.03       5.54 f
+  ADDER_11/add_95/U60/ZN (INV_X1)                         0.03       5.58 r
+  ADDER_11/add_95/U59/ZN (AOI21_X1)                       0.03       5.60 f
+  ADDER_11/add_95/U58/ZN (AOI21_X1)                       0.08       5.68 r
+  ADDER_11/add_95/U53/ZN (OR2_X1)                         0.05       5.73 r
+  ADDER_11/add_95/U51/ZN (NAND2_X1)                       0.03       5.75 f
+  ADDER_11/add_95/U50/ZN (XNOR2_X1)                       0.06       5.81 f
+  ADDER_11/add_95/SUM[48] (RCA_NBIT56_DW01_add_0)         0.00       5.81 f
+  ADDER_11/S[48] (RCA_NBIT56)                             0.00       5.81 f
+  ADDER_12/A[48] (RCA_NBIT58)                             0.00       5.81 f
+  ADDER_12/add_95/A[48] (RCA_NBIT58_DW01_add_0)           0.00       5.81 f
+  ADDER_12/add_95/U61/ZN (XNOR2_X1)                       0.07       5.88 f
+  ADDER_12/add_95/U60/ZN (XNOR2_X1)                       0.07       5.95 f
+  ADDER_12/add_95/SUM[48] (RCA_NBIT58_DW01_add_0)         0.00       5.95 f
+  ADDER_12/S[48] (RCA_NBIT58)                             0.00       5.95 f
+  ADDER_13/A[48] (RCA_NBIT60)                             0.00       5.95 f
+  ADDER_13/add_95/A[48] (RCA_NBIT60_DW01_add_0)           0.00       5.95 f
+  ADDER_13/add_95/U51/ZN (XNOR2_X1)                       0.06       6.01 f
+  ADDER_13/add_95/U50/ZN (XNOR2_X1)                       0.07       6.08 f
+  ADDER_13/add_95/SUM[48] (RCA_NBIT60_DW01_add_0)         0.00       6.08 f
+  ADDER_13/S[48] (RCA_NBIT60)                             0.00       6.08 f
+  ADDER_14/A[48] (RCA_NBIT62)                             0.00       6.08 f
+  ADDER_14/add_95/A[48] (RCA_NBIT62_DW01_add_0)           0.00       6.08 f
+  ADDER_14/add_95/U202/ZN (OAI21_X1)                      0.05       6.13 r
+  ADDER_14/add_95/U231/ZN (OAI21_X1)                      0.04       6.17 f
+  ADDER_14/add_95/U227/ZN (AOI21_X1)                      0.04       6.21 r
+  ADDER_14/add_95/U230/ZN (INV_X1)                        0.03       6.23 f
+  ADDER_14/add_95/U226/ZN (OAI21_X1)                      0.03       6.27 r
+  ADDER_14/add_95/U109/ZN (INV_X1)                        0.02       6.29 f
+  ADDER_14/add_95/U225/ZN (OAI21_X1)                      0.04       6.33 r
+  ADDER_14/add_95/U236/ZN (OAI21_X1)                      0.04       6.37 f
+  ADDER_14/add_95/U71/ZN (OR2_X1)                         0.06       6.43 f
+  ADDER_14/add_95/U41/ZN (NAND2_X1)                       0.03       6.45 r
+  ADDER_14/add_95/U42/ZN (NAND2_X1)                       0.03       6.48 f
+  ADDER_14/add_95/U70/ZN (OAI21_X1)                       0.04       6.52 r
+  ADDER_14/add_95/U66/ZN (NAND2_X1)                       0.03       6.56 f
+  ADDER_14/add_95/U61/ZN (AOI21_X1)                       0.04       6.60 r
+  ADDER_14/add_95/U58/ZN (INV_X1)                         0.03       6.63 f
+  ADDER_14/add_95/U57/ZN (AND2_X1)                        0.04       6.67 f
+  ADDER_14/add_95/U55/ZN (OAI21_X1)                       0.04       6.71 r
+  ADDER_14/add_95/U56/ZN (NAND2_X1)                       0.03       6.73 f
+  ADDER_14/add_95/U235/ZN (AOI21_X1)                      0.05       6.78 r
+  ADDER_14/add_95/U182/ZN (AOI21_X1)                      0.03       6.82 f
+  ADDER_14/add_95/U186/ZN (OR2_X1)                        0.05       6.87 f
+  ADDER_14/add_95/U45/ZN (NAND2_X1)                       0.03       6.90 r
+  ADDER_14/add_95/U15/ZN (NAND2_X1)                       0.03       6.93 f
+  ADDER_14/add_95/U31/ZN (NAND2_X1)                       0.03       6.96 r
+  ADDER_14/add_95/U34/ZN (NAND3_X1)                       0.03       7.00 f
+  ADDER_14/add_95/U1_58/CO (FA_X1)                        0.09       7.09 f
+  ADDER_14/add_95/U179/ZN (XNOR2_X1)                      0.06       7.15 f
+  ADDER_14/add_95/U178/ZN (XNOR2_X1)                      0.06       7.21 f
+  ADDER_14/add_95/SUM[59] (RCA_NBIT62_DW01_add_0)         0.00       7.21 f
+  ADDER_14/S[59] (RCA_NBIT62)                             0.00       7.21 f
+  ADDER_15/A[59] (RCA_NBIT64)                             0.00       7.21 f
+  ADDER_15/add_95/A[59] (RCA_NBIT64_DW01_add_0)           0.00       7.21 f
+  ADDER_15/add_95/U110/ZN (OR2_X1)                        0.07       7.28 f
+  ADDER_15/add_95/U95/ZN (NAND2_X1)                       0.03       7.31 r
+  ADDER_15/add_95/U93/ZN (NAND2_X1)                       0.03       7.34 f
+  ADDER_15/add_95/U88/ZN (NAND2_X1)                       0.03       7.37 r
+  ADDER_15/add_95/U30/ZN (OAI211_X1)                      0.04       7.41 f
+  ADDER_15/add_95/U85/ZN (NAND2_X1)                       0.03       7.45 r
+  ADDER_15/add_95/U94/ZN (NAND2_X1)                       0.03       7.48 f
+  ADDER_15/add_95/U91/ZN (NOR2_X1)                        0.04       7.52 r
+  ADDER_15/add_95/U107/ZN (NOR2_X1)                       0.03       7.55 f
+  ADDER_15/add_95/U108/ZN (XNOR2_X1)                      0.05       7.59 f
+  ADDER_15/add_95/SUM[63] (RCA_NBIT64_DW01_add_0)         0.00       7.59 f
+  ADDER_15/S[63] (RCA_NBIT64)                             0.00       7.59 f
+  S[63] (out)                                             0.00       7.60 f
+  data arrival time                                                  7.60
+
+  max_delay                                               6.74       6.74
+  output external delay                                   0.00       6.74
+  data required time                                                 6.74
+  --------------------------------------------------------------------------
+  data required time                                                 6.74
+  data arrival time                                                 -7.60
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.86
+
+
+1

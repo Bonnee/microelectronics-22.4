@@ -5,7 +5,7 @@ USE ieee.std_logic_unsigned.ALL;
 ENTITY MULTIPLIER_tb IS
 END MULTIPLIER_tb;
 ARCHITECTURE TEST OF MULTIPLIER_tb IS
-  CONSTANT numBit : INTEGER := 8; -- :=8  --:=16    
+  CONSTANT numBit : NATURAL := 8; -- :=8  --:=16    
 
   --  input	 
   SIGNAL A_mp_i : STD_LOGIC_VECTOR(numBit - 1 DOWNTO 0) := (OTHERS => '0');
@@ -39,10 +39,10 @@ BEGIN
   BEGIN
 
     -- cycle for operand A
-    NumROW : FOR i IN 0 TO 2 ** (NumBit) - 1 LOOP
+    NumROW : FOR i IN 0 TO 2 ** (NumBit - 1) LOOP
 
       -- cycle for operand B
-      NumCOL : FOR i IN 0 TO 2 ** (NumBit) - 1 LOOP
+      NumCOL : FOR i IN 0 TO 2 ** (NumBit - 1) LOOP
         WAIT FOR 10 ns;
         B_mp_i <= B_mp_i + '1';
       END LOOP NumCOL;

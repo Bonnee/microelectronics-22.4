@@ -30,9 +30,9 @@ END BOOTHMUL;
 ARCHITECTURE BEHAVIOURAL OF BOOTHMUL IS
 
 	-- How many stages of encoders/muxes
-	CONSTANT NSTAGE : INTEGER := (NBIT/2);
-	-- Max bit size
-	CONSTANT NSIZE : INTEGER := NBIT * 2;
+	CONSTANT NSTAGE : INTEGER := NBIT/2;
+	-- Max bit size. + 2 to account for the last SHIFT which is bigger than NBIT*2
+	CONSTANT NSIZE : INTEGER := (NBIT * 2) + 2;
 
 	-- We use RCA as an adder
 	COMPONENT RCA IS
@@ -63,20 +63,34 @@ ARCHITECTURE BEHAVIOURAL OF BOOTHMUL IS
 		);
 	END COMPONENT;
 
-	-- MUX out signals
-	SIGNAL OTMP : STD_LOGIC_VECTOR((NSIZE * NSTAGE) - 1 DOWNTO 0);
+	-- Returns the size of the ith block.
+	FUNCTION input_bit_width(i : INTEGER) RETURN INTEGER IS
+	BEGIN
+		-- NBIT+1 because we only shift one time in the first encoder
+		-- 2*i because we shift two times for every encoder
+		-- The last +1 to account for the sign
+		RETURN NBIT + 1 + (2 * i) + 1;
+	END FUNCTION;
+
+	TYPE TMPARR_t IS ARRAY (NATURAL RANGE <>) OF STD_LOGIC_VECTOR(NSIZE - 1 DOWNTO 0);
+
+	-- ENC/MUX out signals
+	SIGNAL OTMP : TMPARR_t(NSTAGE - 1 DOWNTO 0);
 
 	-- ADDER out signals
-	SIGNAL PTMP : STD_LOGIC_VECTOR((NSIZE * (NSTAGE - 1)) - 1 DOWNTO 0);
+	SIGNAL PTMP : TMPARR_t(NSTAGE - 1 DOWNTO 0);
 
 	-- Shifted A and -A signals
-	SIGNAL SHIFT : STD_LOGIC_VECTOR((NSIZE * (NSTAGE + 1)) - 1 DOWNTO 0);
-	SIGNAL SHIFT_n : STD_LOGIC_VECTOR((NSIZE * (NSTAGE + 1)) - 1 DOWNTO 0);
+	SIGNAL SHIFT : TMPARR_t (NSTAGE DOWNTO 0);
+	SIGNAL SHIFT_n : TMPARR_t (NSTAGE DOWNTO 0);
+
 	-- -A
 	SIGNAL A_n : STD_LOGIC_VECTOR(NSIZE - 1 DOWNTO 0);
 
+	-- Resized A and B
 	SIGNAL ABIG : STD_LOGIC_VECTOR(NSIZE - 1 DOWNTO 0);
 	SIGNAL BBIG : STD_LOGIC_VECTOR(NSIZE - 1 DOWNTO 0);
+
 BEGIN
 	-- Resize A and B to NBIT*2
 	ABIG <= STD_LOGIC_VECTOR(resize(signed(A), ABIG'length));
@@ -87,57 +101,91 @@ BEGIN
 	A_n <= STD_LOGIC_VECTOR(resize(to_signed(-1 * to_integer(signed(ABIG)), A_n'length + 1), A_n'length));
 
 	-- Set initial values of the shift vector
-	SHIFT(NSIZE - 1 DOWNTO 0) <= ABIG;
-	SHIFT_n(NSIZE - 1 DOWNTO 0) <= A_n;
+	SHIFT(0) <= ABIG;
+	SHIFT_n(0) <= A_n;
 
 	-- Create NSTAGE encoders/muxes
-	GEN_BOOTHSTAGE : FOR I IN 1 TO NSTAGE GENERATE
-		BOOTHENC_I : BOOTHENC
+	-- First encoder is a special child
+	ENC1 : BOOTHENC
+	GENERIC MAP(
+		i => 0,
+		NBIT => input_bit_width(0)
+	)
+	PORT MAP(
+		A_s => SHIFT(0)((input_bit_width(0) - 1) DOWNTO 0),
+		A_ns => SHIFT_n(0)((input_bit_width(0) - 1) DOWNTO 0),
+		B => BBIG((input_bit_width(0) - 1) DOWNTO 0),
+		O => OTMP(0)(input_bit_width(0) - 1 DOWNTO 0),
+		A_so => SHIFT(1)((input_bit_width(0) - 1) DOWNTO 0),
+		A_nso => SHIFT_n(1)((input_bit_width(0) - 1) DOWNTO 0)
+	);
+
+	-- Enlarge first encoder's output by 2 bit
+	OTMP(0)(input_bit_width(0)) <= OTMP(0)(input_bit_width(0) - 1);
+	OTMP(0)(input_bit_width(0) + 1) <= OTMP(0)(input_bit_width(0) - 1);
+
+	-- Enlarge shift signals for next block
+	SHIFT(1)(input_bit_width(0)) <= SHIFT(1)(input_bit_width(0) - 1);
+	SHIFT(1)(input_bit_width(0) + 1) <= SHIFT(1)(input_bit_width(0) - 1);
+	SHIFT_n(1)(input_bit_width(0)) <= SHIFT_n(1)(input_bit_width(0) - 1);
+	SHIFT_n(1)(input_bit_width(0) + 1) <= SHIFT_n(1)(input_bit_width(0) - 1);
+
+	GEN_BOOTHSTAGE : FOR I IN 1 TO NSTAGE - 1 GENERATE
+		ENC : BOOTHENC
 		GENERIC MAP(
-			NBIT => NSIZE,
-			i => ((I - 1) * 2)
+			i => (I * 2),
+			NBIT => input_bit_width(I)
 		)
 		PORT MAP(
-			A_s => SHIFT(((NSIZE * I) - 1) DOWNTO (NSIZE * (I - 1))),
-			A_ns => SHIFT_n(((NSIZE * I) - 1) DOWNTO (NSIZE * (I - 1))),
-			B => BBIG,
-			O => OTMP(((NSIZE * I) - 1) DOWNTO (NSIZE * (I - 1))),
-			A_so => SHIFT(((NSIZE * (I + 1)) - 1) DOWNTO (NSIZE * I)),
-			A_nso => SHIFT_n(((NSIZE * (I + 1)) - 1) DOWNTO (NSIZE * I))
+			A_s => SHIFT(I)((input_bit_width(I) - 1) DOWNTO 0),
+			A_ns => SHIFT_n(I)((input_bit_width(I) - 1) DOWNTO 0),
+			B => BBIG((input_bit_width(I) - 1) DOWNTO 0),
+			O => OTMP(I)((input_bit_width(I) - 1) DOWNTO 0),
+			A_so => SHIFT(I + 1)(input_bit_width(I) - 1 DOWNTO 0),
+			A_nso => SHIFT_n(I + 1)(input_bit_width(I) - 1 DOWNTO 0)
 		);
 
+		-- Resize output shift signal for next block
+		SHIFT(I + 1)(input_bit_width(I)) <= SHIFT(I + 1)(input_bit_width(I) - 1);
+		SHIFT(I + 1)(input_bit_width(I) + 1) <= SHIFT(I + 1)(input_bit_width(I) - 1);
+		SHIFT_n(I + 1)(input_bit_width(I)) <= SHIFT_n(I + 1)(input_bit_width(I) - 1);
+		SHIFT_n(I + 1)(input_bit_width(I) + 1) <= SHIFT_n(I + 1)(input_bit_width(I) - 1);
 	END GENERATE;
 
-	GEN_ADDERS : FOR I IN 2 TO NSTAGE GENERATE
-		-- The first adder's inputs are connected to two muxes, while all other
-		-- adders are fed by a mux and the previous adder
-		FIRSTADD : IF (I = 2) GENERATE
-			ADDER2 : RCA
-			GENERIC MAP(NBIT => NSIZE)
-			PORT MAP(
-				A => OTMP(NSIZE - 1 DOWNTO 0),
-				B => OTMP((2 * NSIZE) - 1 DOWNTO NSIZE),
-				Ci => '0',
-				S => PTMP((1 * NSIZE) - 1 DOWNTO (0 * NSIZE)),
-				Co => OPEN
-			);
-		END GENERATE;
+	-- First adder is fed from first and second encoders. It's the only adder fed only by encoders
+	ADDER1 : RCA
+	GENERIC MAP(NBIT => input_bit_width(1))
+	PORT MAP(
+		A => OTMP(0)(input_bit_width(1) - 1 DOWNTO 0),
+		B => OTMP(1)(input_bit_width(1) - 1 DOWNTO 0),
+		Ci => '0',
+		S => PTMP(0)(input_bit_width(1) - 1 DOWNTO 0),
+		Co => OPEN
+	);
 
-		ELSADD : IF (I /= 2) GENERATE
-			ADDERI : RCA
-			GENERIC MAP(NBIT => NSIZE)
-			PORT MAP(
-				A => PTMP(((I - 2) * NSIZE) - 1 DOWNTO ((I - 3) * NSIZE)),
-				B => OTMP(((I - 0) * NSIZE) - 1 DOWNTO ((I - 1) * NSIZE)),
-				Ci => '0',
-				S => PTMP(((I - 1) * NSIZE) - 1 DOWNTO ((I - 2) * NSIZE)),
-				Co => OPEN
-			);
-		END GENERATE;
+	-- Resize adder output to match adder+1 input size
+	PTMP(0)(input_bit_width(1)) <= PTMP(0)(input_bit_width(1) - 1);
+	PTMP(0)(input_bit_width(1) + 1) <= PTMP(0)(input_bit_width(1) - 1);
+
+	-- Adders take A (output of I-1th adder) and B (output of Ith encoder)
+	GEN_ADDERS : FOR I IN 2 TO NSTAGE - 1 GENERATE
+		ADDER : RCA
+		GENERIC MAP(NBIT => input_bit_width(I))
+		PORT MAP(
+			A => PTMP(I - 2)(input_bit_width(I) - 1 DOWNTO 0),
+			B => OTMP(I)(input_bit_width(I) - 1 DOWNTO 0),
+			Ci => '0',
+			S => PTMP(I - 1)(input_bit_width(I) - 1 DOWNTO 0),
+			Co => OPEN
+		);
+
+		-- Enlarge each adder's output by 2 bit
+		PTMP(I - 1)(input_bit_width(I)) <= PTMP(I - 1)(input_bit_width(I) - 1);
+		PTMP(I - 1)(input_bit_width(I) + 1) <= PTMP(I - 1)(input_bit_width(I) - 1);
 	END GENERATE;
 
 	-- Output of the last adder is our solution
-	S <= PTMP((NSIZE * (NSTAGE - 1)) - 1 DOWNTO (NSIZE * (NSTAGE - 2)));
+	S <= PTMP(NSTAGE - 2)(S'length - 1 DOWNTO 0);
 
 END BEHAVIOURAL;
 
@@ -149,15 +197,8 @@ CONFIGURATION CFG_BOOTHMUL_MIXED OF BOOTHMUL IS
 			END FOR;
 		END FOR;
 		FOR GEN_ADDERS
-			FOR FIRSTADD
-				FOR ALL : RCA
-					USE CONFIGURATION WORK.CFG_RCA_STRUCTURAL;
-				END FOR;
-			END FOR;
-			FOR ELSADD
-				FOR ALL : RCA
-					USE CONFIGURATION WORK.CFG_RCA_STRUCTURAL;
-				END FOR;
+			FOR ALL : RCA
+				USE CONFIGURATION WORK.CFG_RCA_DIRECT;
 			END FOR;
 		END FOR;
 	END FOR;

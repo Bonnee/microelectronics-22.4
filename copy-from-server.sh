@@ -1,3 +1,3 @@
 #!/bin/sh
-rsync -avh --delete --ignore-existing --info=progress mspolito:~/cap* ./
+rsync -avch --delete --ignore-existing --info=progress mspolito:~/cap* ./
 

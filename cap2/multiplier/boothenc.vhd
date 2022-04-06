@@ -19,6 +19,8 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.ALL;
 USE ieee.numeric_std.ALL;
 
+-- The encoder takes A from the previous encoder block so that it only has to do
+-- a shift of 2 bits.
 ENTITY BOOTHENC IS
 	GENERIC (
 		NBIT : INTEGER;

@@ -1,0 +1,707 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : P4_ADDER_NBIT32
+Version: F-2011.09-SP3
+Date   : Wed Apr  6 21:55:46 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/G_prev (GG_78)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/G (GG_78)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[4] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[4] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_5/Cin (CSB_NBIT4_1_10)            0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_5/U5/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_5/S[2] (CSB_NBIT4_1_10)           0.00       0.66 r
+  U_SUM_GENERATOR/S[18] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[22] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/G_prev (GG_78)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_19/G (GG_78)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[4] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[4] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_5/Cin (CSB_NBIT4_1_10)            0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_5/U4/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_5/S[3] (CSB_NBIT4_1_10)           0.00       0.66 r
+  U_SUM_GENERATOR/S[19] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[23] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G_prev (GG_77)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G (GG_77)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[5] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[5] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/Cin (CSB_NBIT4_1_9)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/U7/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_6/S[0] (CSB_NBIT4_1_9)            0.00       0.66 r
+  U_SUM_GENERATOR/S[20] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[24] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G_prev (GG_77)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G (GG_77)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[5] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[5] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/Cin (CSB_NBIT4_1_9)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/U6/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_6/S[1] (CSB_NBIT4_1_9)            0.00       0.66 r
+  U_SUM_GENERATOR/S[21] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[25] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G_prev (GG_77)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G (GG_77)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[5] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[5] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/Cin (CSB_NBIT4_1_9)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/U5/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_6/S[2] (CSB_NBIT4_1_9)            0.00       0.66 r
+  U_SUM_GENERATOR/S[22] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[26] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G_prev (GG_77)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_23/G (GG_77)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[5] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[5] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/Cin (CSB_NBIT4_1_9)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_6/U4/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_6/S[3] (CSB_NBIT4_1_9)            0.00       0.66 r
+  U_SUM_GENERATOR/S[23] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[27] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G_prev (GG_76)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G (GG_76)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/Cin (CSB_NBIT4_1_8)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/U7/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_7/S[0] (CSB_NBIT4_1_8)            0.00       0.66 r
+  U_SUM_GENERATOR/S[24] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[28] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G_prev (GG_76)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G (GG_76)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/Cin (CSB_NBIT4_1_8)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/U6/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_7/S[1] (CSB_NBIT4_1_8)            0.00       0.66 r
+  U_SUM_GENERATOR/S[25] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[29] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G_prev (GG_76)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G (GG_76)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/Cin (CSB_NBIT4_1_8)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/U5/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_7/S[2] (CSB_NBIT4_1_8)            0.00       0.66 r
+  U_SUM_GENERATOR/S[26] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[30] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: A[0] (input port)
+  Endpoint: S[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[0] (in)                                               0.00       0.00 f
+  U_CARRY_GENERATOR/A[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/A (PG_PRIM_64)            0.00       0.00 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U1/Z (XOR2_X1)            0.07       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.14 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.14 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.18 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (AOI21_X1)
+                                                          0.04       0.25 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (INV_X1)
+                                                          0.04       0.29 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.29 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (AOI21_X1)     0.05       0.34 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U1/ZN (INV_X1)       0.04       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G_prev (GG_81)      0.00       0.39 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U2/ZN (AOI21_X1)
+                                                          0.06       0.45 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/U1/ZN (INV_X1)      0.05       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_15/G (GG_81)           0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G_prev (GG_76)      0.00       0.50 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U2/ZN (AOI21_X1)
+                                                          0.06       0.56 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/U1/ZN (INV_X1)      0.04       0.60 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_3_27/G (GG_76)           0.00       0.60 f
+  U_CARRY_GENERATOR/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/Ci[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/Cin (CSB_NBIT4_1_8)             0.00       0.60 f
+  U_SUM_GENERATOR/U_CSB_7/U4/Z (MUX2_X1)                  0.07       0.66 r
+  U_SUM_GENERATOR/U_CSB_7/S[3] (CSB_NBIT4_1_8)            0.00       0.66 r
+  U_SUM_GENERATOR/S[27] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.66 r
+  S[31] (out)                                             0.00       0.67 r
+  data arrival time                                                  0.67
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

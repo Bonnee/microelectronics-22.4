@@ -13,9 +13,9 @@
 -- Revision 00 - Matteo Bonora
 --  * File Created
 -- Revision 01 - Simone Ruffini
---  * Typos and refactor
+--  * Fix carry in and carry out
 -- Additional Comments:
---
+-- 
 --------------------------------------------------------------------------------
 
 LIBRARY ieee;
@@ -25,7 +25,7 @@ USE ieee.std_logic_unsigned.ALL;
 ENTITY SUM_GENERATOR IS
 	GENERIC (
 		NBIT_PER_BLOCK : INTEGER := 4;
-		NBLOCKS : INTEGER := 8
+		NBLOCKS        : INTEGER := 8
   );
 	PORT (
 		A  : IN STD_LOGIC_VECTOR(NBIT_PER_BLOCK * NBLOCKS - 1 DOWNTO 0);
@@ -36,9 +36,11 @@ ENTITY SUM_GENERATOR IS
 END ENTITY;
 
 ARCHITECTURE BEHAVIOURAL OF SUM_GENERATOR IS
+
+
 	COMPONENT CSB
 		GENERIC (
-			NBIT : INTEGER := NBIT_PER_BLOCK
+			NBIT : INTEGER 
 		);
 		PORT (
 			A   : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
@@ -48,18 +50,21 @@ ARCHITECTURE BEHAVIOURAL OF SUM_GENERATOR IS
 			Co  : OUT STD_LOGIC
     );
 	END COMPONENT;
+
 BEGIN
+
 	GEN_CSB : FOR I IN 1 TO NBLOCKS GENERATE
 		U_CSB : CSB
       GENERIC MAP (NBIT => NBIT_PER_BLOCK)
       PORT MAP(
-        A   => A(I * NBLOCKS DOWNTO (I - 1) * NBLOCKS), 
-        B   => B(I * NBLOCKS DOWNTO (I - 1) * NBLOCKS), 
+        A   => A((I * NBIT_PER_BLOCK)-1 DOWNTO (I - 1) * NBIT_PER_BLOCK), 
+        B   => B((I * NBIT_PER_BLOCK)-1 DOWNTO (I - 1) * NBIT_PER_BLOCK), 
         Cin => Ci(I - 1), 
-        S   => S(I * NBLOCKS DOWNTO (I - 1) * NBLOCKS), 
-        Co  => OPEN
+        S   => S((I * NBIT_PER_BLOCK)-1 DOWNTO (I - 1) * NBIT_PER_BLOCK), 
+        Co  => open
       );
 	END GENERATE;
+
 END BEHAVIOURAL;
 
 CONFIGURATION CFG_SUM_GENERATOR_STRUCTURAL OF SUM_GENERATOR IS

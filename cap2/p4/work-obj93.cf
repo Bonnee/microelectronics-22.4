@@ -1,0 +1,27 @@
+v 4
+file . "tb_carry_generator.vhd" "897a7f440a434835b2d8186e9d51facc1a5730ab" "20220331204818.336":
+  entity tb_carry_generator at 1( 0) + 0 on 29;
+  architecture test of tb_carry_generator at 8( 142) + 0 on 30;
+file . "CARRY_GENERATOR.vhd" "5556768c8607375a52767e62c7088e626d5fe587" "20220331204818.335":
+  entity carry_generator at 17( 515) + 0 on 24;
+  architecture structural of carry_generator at 39( 973) + 0 on 25;
+  architecture behavioral of carry_generator at 180( 6330) + 0 on 26;
+  configuration cfg_rca_structural at 184( 6399) + 0 on 27;
+  configuration cfg_rca_behavioral at 189( 6507) + 0 on 28;
+file . "GP.vhd" "9b4191f79e5dd390f404547fc30d77a07dd6d809" "20220331204818.332":
+  entity gp at 17( 513) + 0 on 21;
+  architecture behavioral of gp at 29( 725) + 0 on 22;
+  configuration cfg_gp_behavioral at 36( 826) + 0 on 23;
+file . "GG.vhd" "91de6da0890eed1f324f602adffe6a62b461b80a" "20220331204818.331":
+  entity gg at 17( 512) + 0 on 18;
+  architecture behavioral of gg at 30( 757) + 0 on 19;
+  configuration cfg_gg_behavioral at 37( 877) + 0 on 20;
+file . "PG_PRIM.vhd" "e686d511e01c2ab3033a23054d907f5a6d0a58bb" "20220331204818.330":
+  entity pg_prim at 17( 528) + 0 on 13;
+  architecture behavioral of pg_prim at 30( 765) + 0 on 14;
+  architecture behavioral2 of pg_prim at 38( 864) + 0 on 15;
+  configuration cfg_pg_prim_behavioral_xor at 46( 964) + 0 on 16;
+  configuration cfg_pg_prim_behavioral_or at 51( 1080) + 0 on 17;
+file . "COMM_PKG.vhd" "776d177bdcbe8b6831d72cb8edba4091dcc1216e" "20220331204818.329":
+  package comm_pkg at 17( 518) + 0 on 11 body;
+  package body comm_pkg at 34( 910) + 0 on 12;

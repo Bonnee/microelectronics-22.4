@@ -1,0 +1,92 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : P4_ADDER_NBIT32
+Version: F-2011.09-SP3
+Date   : Wed Apr  6 21:56:03 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B[0] (input port)
+  Endpoint: S[12] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4_ADDER_NBIT32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  B[0] (in)                                               0.00       0.00 r
+  U_CARRY_GENERATOR/B[0] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.00 r
+  U_CARRY_GENERATOR/U_PG_PRIM_0/B (PG_PRIM_64)            0.00       0.00 r
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U4/ZN (INV_X1)            0.02       0.02 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U2/ZN (NAND2_X1)          0.02       0.05 r
+  U_CARRY_GENERATOR/U_PG_PRIM_0/U3/ZN (NAND2_X1)          0.03       0.07 f
+  U_CARRY_GENERATOR/U_PG_PRIM_0/p (PG_PRIM_64)            0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/P_current (GG_74)
+                                                          0.00       0.07 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U2/ZN (AOI21_X1)
+                                                          0.04       0.11 r
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/U1/ZN (INV_X1)
+                                                          0.02       0.13 f
+  U_CARRY_GENERATOR/U_RXMOST_PG_PRIM_IS_GG_UNIT_0/G (GG_74)
+                                                          0.00       0.13 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G_prev (GG_110)
+                                                          0.00       0.13 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U2/ZN (AOI21_X1)
+                                                          0.04       0.17 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/U1/ZN (INV_X1)
+                                                          0.02       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_1_1/G (GG_110)       0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G_prev (GG_94)
+                                                          0.00       0.20 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U1/ZN (AOI21_X1)
+                                                          0.04       0.24 r
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/U2/ZN (INV_X1)
+                                                          0.03       0.26 f
+  U_CARRY_GENERATOR/U_BKBONE_GG_UNIT_2_3/G (GG_94)        0.00       0.26 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G_prev (GG_86)       0.00       0.26 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U2/ZN (NAND2_X1)     0.03       0.29 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/U3/ZN (NAND2_X1)     0.03       0.32 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_1_7/G (GG_86)            0.00       0.32 f
+  U_CARRY_GENERATOR/U1/Z (BUF_X1)                         0.04       0.36 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_11/G_prev (GG_82)      0.00       0.36 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_11/U2/ZN (AOI21_X1)
+                                                          0.04       0.40 r
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_11/U1/ZN (INV_X1)      0.04       0.44 f
+  U_CARRY_GENERATOR/U_LF_GG_UNIT_2_11/G (GG_82)           0.00       0.44 f
+  U_CARRY_GENERATOR/Co[2] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4_3)
+                                                          0.00       0.44 f
+  U_SUM_GENERATOR/Ci[2] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.44 f
+  U_SUM_GENERATOR/U_CSB_3/Cin (CSB_NBIT4_1_12)            0.00       0.44 f
+  U_SUM_GENERATOR/U_CSB_3/U8/ZN (INV_X1)                  0.05       0.49 r
+  U_SUM_GENERATOR/U_CSB_3/U11/ZN (AOI22_X1)               0.03       0.52 f
+  U_SUM_GENERATOR/U_CSB_3/U10/ZN (INV_X1)                 0.02       0.54 r
+  U_SUM_GENERATOR/U_CSB_3/S[0] (CSB_NBIT4_1_12)           0.00       0.54 r
+  U_SUM_GENERATOR/S[8] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS7_3)
+                                                          0.00       0.54 r
+  S[12] (out)                                             0.00       0.54 r
+  data arrival time                                                  0.54
+
+  max_delay                                               0.54       0.54
+  output external delay                                   0.00       0.54
+  data required time                                                 0.54
+  --------------------------------------------------------------------------
+  data required time                                                 0.54
+  data arrival time                                                 -0.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
