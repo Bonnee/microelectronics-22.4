@@ -1,16 +1,19 @@
 --------------------------------------------------------------------------------
--- Engineer: Matteo Bonora  [matteo.bonora@polito.it]
+-- Engineer: Matteo Bonora  [matteo.bonora@studenti.polito.it]
+--           Simone Ruffini [simone.ruffini@studenti.polito.it]
 -- 
 -- Create Date:     Mon Mar 22 11:01:00 CET 2022
 -- Design Name:     Carry Select Block
 -- Module Name:     csb.vhd
--- Project Name:    
--- Description:     
+-- Project Name:    P4 adder
+-- Description:     carry-select block NBIT-adder
 --                  
 --
 -- Revision:
 -- Revision 00 - Matteo Bonora
 --  * Created
+-- Revision 01 - Simone Ruffini
+--  * Typos and refactor
 -- Additional Comments:
 --
 --------------------------------------------------------------------------------
@@ -21,14 +24,15 @@ USE ieee.numeric_std.ALL;
 
 ENTITY CSB IS
   GENERIC (
-    NBIT : INTEGER := 32
+    NBIT : INTEGER := 4
   );
   PORT (
-    A : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+    A   : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+    B   : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
     Cin : IN STD_LOGIC;
-    S : OUT STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-    Co : OUT STD_LOGIC);
+    S   : OUT STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+    Co  : OUT STD_LOGIC
+  );
 END CSB;
 
 ARCHITECTURE BEHAVIOURAL OF CSB IS
@@ -38,10 +42,10 @@ ARCHITECTURE BEHAVIOURAL OF CSB IS
       NBIT : INTEGER
     );
     PORT (
-      A : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
-      B : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+      A  : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+      B  : IN STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
       Ci : IN STD_LOGIC;
-      S : OUT STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
+      S  : OUT STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
       Co : OUT STD_LOGIC
     );
   END COMPONENT;
@@ -51,15 +55,15 @@ ARCHITECTURE BEHAVIOURAL OF CSB IS
   SIGNAL S1 : STD_LOGIC_VECTOR(NBIT - 1 DOWNTO 0);
 BEGIN
 
-  RCA0 : RCA
+  U_RCA0 : RCA
   GENERIC MAP(NBIT => NBIT)
   PORT MAP(A => A, B => B, Ci => '0', S => S0, Co => Co0);
 
-  RCA1 : RCA
+  U_RCA1 : RCA
   GENERIC MAP(NBIT => NBIT)
   PORT MAP(A => A, B => B, Ci => '1', S => S1, Co => Co1);
 
-  MUX : PROCESS (Co0, Co1, Cin, S0, S1)
+  U_MUX : PROCESS (Co0, Co1, Cin, S0, S1)
   BEGIN
     IF (Cin = '1') THEN
       Co <= Co1;
