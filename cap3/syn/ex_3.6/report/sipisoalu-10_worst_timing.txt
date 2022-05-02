@@ -1,0 +1,245 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : SIPISOALU
+Version: F-2011.09-SP3
+Date   : Wed Apr 27 22:09:23 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: control/CURRENT_STATE_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[3]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[3]/QN (DFFR_X1)               0.09       0.09 f
+  control/U33/ZN (NOR4_X1)                                0.12       0.21 r
+  control/U20/ZN (AND2_X1)                                0.06       0.27 r
+  control/startC (sipisoAluControl)                       0.00       0.27 r
+  STARTC (out)                                            0.00       0.27 r
+  data arrival time                                                  0.27
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[0]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[0]/QN (DFFR_X1)               0.09       0.09 f
+  control/U33/ZN (NOR4_X1)                                0.11       0.20 r
+  control/U20/ZN (AND2_X1)                                0.06       0.26 r
+  control/startC (sipisoAluControl)                       0.00       0.26 r
+  STARTC (out)                                            0.00       0.27 r
+  data arrival time                                                  0.27
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[4]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[4]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[4]/Q (DFFR_X1)                0.09       0.09 f
+  control/U33/ZN (NOR4_X1)                                0.10       0.18 r
+  control/U20/ZN (AND2_X1)                                0.06       0.25 r
+  control/startC (sipisoAluControl)                       0.00       0.25 r
+  STARTC (out)                                            0.00       0.25 r
+  data arrival time                                                  0.25
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[1]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[1]/Q (DFFR_X1)                0.10       0.10 f
+  control/U33/ZN (NOR4_X1)                                0.08       0.18 r
+  control/U20/ZN (AND2_X1)                                0.06       0.25 r
+  control/startC (sipisoAluControl)                       0.00       0.25 r
+  STARTC (out)                                            0.00       0.25 r
+  data arrival time                                                  0.25
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[1]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[1]/Q (DFFR_X1)                0.12       0.12 r
+  control/U33/ZN (NOR4_X1)                                0.03       0.15 f
+  control/U20/ZN (AND2_X1)                                0.05       0.20 f
+  control/startC (sipisoAluControl)                       0.00       0.20 f
+  STARTC (out)                                            0.00       0.20 f
+  data arrival time                                                  0.20
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[2]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[2]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[2]/Q (DFFR_X1)                0.12       0.12 r
+  control/U20/ZN (AND2_X1)                                0.06       0.18 r
+  control/startC (sipisoAluControl)                       0.00       0.18 r
+  STARTC (out)                                            0.00       0.19 r
+  data arrival time                                                  0.19
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[4]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[4]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[4]/Q (DFFR_X1)                0.11       0.11 r
+  control/U33/ZN (NOR4_X1)                                0.03       0.13 f
+  control/U20/ZN (AND2_X1)                                0.05       0.18 f
+  control/startC (sipisoAluControl)                       0.00       0.18 f
+  STARTC (out)                                            0.00       0.19 f
+  data arrival time                                                  0.19
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[3]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[3]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[3]/QN (DFFR_X1)               0.09       0.09 r
+  control/U33/ZN (NOR4_X1)                                0.04       0.13 f
+  control/U20/ZN (AND2_X1)                                0.05       0.18 f
+  control/startC (sipisoAluControl)                       0.00       0.18 f
+  STARTC (out)                                            0.00       0.18 f
+  data arrival time                                                  0.18
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[0]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[0]/QN (DFFR_X1)               0.09       0.09 r
+  control/U33/ZN (NOR4_X1)                                0.04       0.13 f
+  control/U20/ZN (AND2_X1)                                0.05       0.18 f
+  control/startC (sipisoAluControl)                       0.00       0.18 f
+  STARTC (out)                                            0.00       0.18 f
+  data arrival time                                                  0.18
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: control/CURRENT_STATE_reg[2]
+              (rising edge-triggered flip-flop)
+  Endpoint: STARTC (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SIPISOALU          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control/CURRENT_STATE_reg[2]/CK (DFFR_X1)               0.00       0.00 r
+  control/CURRENT_STATE_reg[2]/Q (DFFR_X1)                0.10       0.10 f
+  control/U20/ZN (AND2_X1)                                0.05       0.15 f
+  control/startC (sipisoAluControl)                       0.00       0.15 f
+  STARTC (out)                                            0.00       0.16 f
+  data arrival time                                                  0.16
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,18 @@
+puts "############## Analyzing VHDL FILES ##############"
+analyze -library WORK -format vhdl {./COMM_PKG.vhd} 
+analyze -library WORK -format vhdl {./RF.vhd} 
+analyze -library WORK -format vhdl {./ADDR_DEC.vhd} 
+analyze -library WORK -format vhdl {./WRF_CU.vhd} 
+analyze -library WORK -format vhdl {./WRF.vhd} 
+puts "############## Elaborating Top Entity ##############"
+elaborate -library WORK CFG_WRF_BEHAVIOURAL -parameters "DATA_W=8, N_WIN=8, N_REG_PER_WIN=5, N_WIN=3, N_GLOBAL_REG=5"
+puts "############## Complie Top Entity ##############"
+compile 
+
+create_clock -name "CLK" -period 2.00 CLK
+
+report_timing > ./report/WRF-timing.txt
+
+write -hierarchy -format ddc -output ./report/WRF.ddc
+write -hierarchy -format vhdl -output ./report/WRF.vhdl
+

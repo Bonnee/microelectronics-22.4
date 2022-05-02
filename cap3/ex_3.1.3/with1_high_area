@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : WRF_CU_N_REG_PER_WIN5_N_WIN8
+Version: F-2011.09-SP3
+Date   : Tue Apr 26 20:09:01 2022
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                           13
+Number of nets:                           140
+Number of cells:                          118
+Number of combinational cells:             95
+Number of sequential cells:                23
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      17
+
+Combinational area:         98.420000
+Noncombinational area:     122.360004
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:           220.780004
+Total area:                 undefined
+1

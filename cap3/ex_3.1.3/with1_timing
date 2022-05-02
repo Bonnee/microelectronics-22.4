@@ -1,0 +1,62 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : WRF_CU_N_REG_PER_WIN5_N_WIN8
+Version: F-2011.09-SP3
+Date   : Tue Apr 26 19:55:15 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: wrf_cu_cur_state_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: spill_cntr_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  WRF_CU_N_REG_PER_WIN5_N_WIN8
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  wrf_cu_cur_state_reg[0]/CK (DFFR_X1)                    0.00       0.00 r
+  wrf_cu_cur_state_reg[0]/Q (DFFR_X1)                     0.11       0.11 r
+  U167/ZN (NAND2_X1)                                      0.04       0.16 f
+  U160/ZN (NOR2_X1)                                       0.06       0.22 r
+  U165/ZN (NAND2_X1)                                      0.05       0.28 f
+  U162/ZN (NAND4_X1)                                      0.05       0.33 r
+  U126/ZN (INV_X1)                                        0.03       0.36 f
+  U125/ZN (NAND2_X1)                                      0.04       0.41 r
+  U112/ZN (NOR2_X2)                                       0.06       0.46 f
+  U105/ZN (NOR2_X1)                                       0.08       0.55 r
+  U107/ZN (AND3_X1)                                       0.07       0.62 r
+  U121/ZN (OAI221_X1)                                     0.06       0.68 f
+  U115/ZN (NAND2_X1)                                      0.05       0.73 r
+  U106/ZN (INV_X1)                                        0.06       0.79 f
+  U155/ZN (AOI21_X1)                                      0.06       0.85 r
+  U154/ZN (OAI221_X1)                                     0.05       0.90 f
+  spill_cntr_reg[0]/D (DFFS_X1)                           0.01       0.91 f
+  data arrival time                                                  0.91
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  spill_cntr_reg[0]/CK (DFFS_X1)                          0.00       2.00 r
+  library setup time                                     -0.05       1.95
+  data required time                                                 1.95
+  --------------------------------------------------------------------------
+  data required time                                                 1.95
+  data arrival time                                                 -0.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.04
+
+
+1

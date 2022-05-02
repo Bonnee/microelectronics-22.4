@@ -1,0 +1,20 @@
+puts "############## Analyzing VHDL FILES ##############"
+analyze -library WORK -format vhdl {./sipisoalu.vhd} 
+analyze -library WORK -format vhdl {./sipisoAluControl.vhd} 
+puts "############## Elaborating Top Entity ##############"
+elaborate SIPISOALU -architecture A -library WORK
+puts "############## Complie Top Entity ##############"
+compile 
+report_timing -nworst 10 > ./report/sipisoalu-10_worst_timing.txt
+report_timing > ./report/sipisoalu-timing.txt
+report_power > ./report/sipisoalu-power.txt
+report_power -cell > ./report/sipisoalu-power_only_cell.txt
+report_power -net > ./report/sipisoalu-power_only_net.txt
+
+create_clock -name "CLK" -period 0.27 CLK
+
+report_power > ./report/sipisoalu-power_clk.txt
+
+write -hierarchy -format ddc -output ./report/SIPISOALU-no-const-pwr.ddc
+write -hierarchy -format vhdl -output ./report/SIPISOALU-no-const-pwr.vhdl
+

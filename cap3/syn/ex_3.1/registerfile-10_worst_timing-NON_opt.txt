@@ -1,0 +1,101 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : register_file_ADDR_W2_DATA_W1
+Version: F-2011.09-SP3
+Date   : Thu Apr  7 11:19:15 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: OUT1_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT1[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  register_file_ADDR_W2_DATA_W1
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  OUT1_reg[0]/CK (DFF_X1)                  0.00       0.00 r
+  OUT1_reg[0]/Q (DFF_X1)                   0.09       0.09 r
+  OUT1[0] (out)                            0.00       0.09 r
+  data arrival time                                   0.09
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: OUT2_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT2[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  register_file_ADDR_W2_DATA_W1
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  OUT2_reg[0]/CK (DFF_X1)                  0.00       0.00 r
+  OUT2_reg[0]/Q (DFF_X1)                   0.09       0.09 r
+  OUT2[0] (out)                            0.00       0.09 r
+  data arrival time                                   0.09
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: OUT1_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT1[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  register_file_ADDR_W2_DATA_W1
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  OUT1_reg[0]/CK (DFF_X1)                  0.00       0.00 r
+  OUT1_reg[0]/Q (DFF_X1)                   0.08       0.08 f
+  OUT1[0] (out)                            0.00       0.08 f
+  data arrival time                                   0.08
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: OUT2_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT2[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  register_file_ADDR_W2_DATA_W1
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  OUT2_reg[0]/CK (DFF_X1)                  0.00       0.00 r
+  OUT2_reg[0]/Q (DFF_X1)                   0.08       0.08 f
+  OUT2[0] (out)                            0.00       0.08 f
+  data arrival time                                   0.08
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

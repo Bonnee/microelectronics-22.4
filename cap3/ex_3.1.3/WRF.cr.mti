@@ -1,0 +1,85 @@
+/home/ms22.4/cap3/ex_3.1.3/RF.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/ms22.4/cap3/ex_3.1.3/RF.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity RF
+-- Compiling architecture Behavioural of RF
+-- Compiling configuration CFG_RF_BEHAVIOURAL
+-- Loading entity RF
+-- Loading architecture Behavioural of RF
+
+} {} {}} /home/ms22.4/cap3/ex_3.1.3/tb_WRF.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/ms22.4/cap3/ex_3.1.3/tb_WRF.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package COMM_PKG
+-- Compiling entity TB_WRF
+-- Compiling architecture TEST of TB_WRF
+-- Compiling configuration CFG_TB_WRF
+-- Loading entity TB_WRF
+-- Loading architecture TEST of TB_WRF
+-- Loading entity WRF
+-- Loading configuration cfg_wrf_behavioural
+
+} {} {}} /home/ms22.4/cap3/ex_3.1.3/COMM_PKG.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/ms22.4/cap3/ex_3.1.3/COMM_PKG.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling package COMM_PKG
+-- Compiling package body COMM_PKG
+-- Loading package COMM_PKG
+
+} {} {}} /home/ms22.4/cap3/ex_3.1.3/tb_WRF_CU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/ms22.4/cap3/ex_3.1.3/tb_WRF_CU.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package COMM_PKG
+-- Compiling entity TB_WRF_CU
+-- Compiling architecture TEST of TB_WRF_CU
+-- Loading entity WRF_CU
+
+} {} {}} /home/ms22.4/cap3/ex_3.1.3/tb_ADDR_DEC.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/ms22.4/cap3/ex_3.1.3/tb_ADDR_DEC.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package COMM_PKG
+-- Compiling entity TB_ADDR_DEC
+-- Compiling architecture TEST of TB_ADDR_DEC
+-- Loading entity ADDR_DEC
+
+} {} {}} /home/ms22.4/cap3/ex_3.1.3/WRF.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/ms22.4/cap3/ex_3.1.3/WRF.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package COMM_PKG
+-- Compiling entity WRF
+-- Compiling architecture Behavioural of WRF
+-- Compiling configuration CFG_WRF_BEHAVIOURAL
+-- Loading entity WRF
+-- Loading architecture Behavioural of WRF
+-- Loading entity WRF_CU
+-- Loading entity ADDR_DEC
+-- Loading entity RF
+-- Loading configuration cfg_wrf_cu_behavioural
+-- Loading configuration cfg_addr_dec_behavioural2
+-- Loading configuration cfg_rf_behavioural
+
+} {} {}}

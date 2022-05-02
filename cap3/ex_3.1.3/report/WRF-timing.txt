@@ -1,0 +1,76 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : WRF_DATA_W8_N_WIN3_N_REG_PER_WIN5_N_GLOBAL_REG5
+Version: F-2011.09-SP3
+Date   : Wed Apr 27 22:52:14 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: U_WRF_CU/cwp_cntr_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: U_RF/OUT1_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  WRF_DATA_W8_N_WIN3_N_REG_PER_WIN5_N_GLOBAL_REG5
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  U_WRF_CU/cwp_cntr_reg[1]/CK (DFFR_X1)                   0.00       0.00 r
+  U_WRF_CU/cwp_cntr_reg[1]/Q (DFFR_X1)                    0.10       0.10 f
+  U_WRF_CU/CWP[1] (WRF_CU_N_GLOBAL_REG5_N_REG_PER_WIN5_N_WIN3)
+                                                          0.00       0.10 f
+  U_ADDR_DEC_RADDR1/CWP[1] (ADDR_DEC_N_GLOBAL_REG5_N_REG_PER_WIN5_N_WIN3_2)
+                                                          0.00       0.10 f
+  U_ADDR_DEC_RADDR1/U36/Z (MUX2_X1)                       0.08       0.18 f
+  U_ADDR_DEC_RADDR1/r21/B[1] (ADDR_DEC_N_GLOBAL_REG5_N_REG_PER_WIN5_N_WIN3_2_DW01_add_0)
+                                                          0.00       0.18 f
+  U_ADDR_DEC_RADDR1/r21/U1_1/CO (FA_X1)                   0.10       0.28 f
+  U_ADDR_DEC_RADDR1/r21/U1_2/CO (FA_X1)                   0.09       0.37 f
+  U_ADDR_DEC_RADDR1/r21/U1_3/S (FA_X1)                    0.14       0.51 r
+  U_ADDR_DEC_RADDR1/r21/SUM[3] (ADDR_DEC_N_GLOBAL_REG5_N_REG_PER_WIN5_N_WIN3_2_DW01_add_0)
+                                                          0.00       0.51 r
+  U_ADDR_DEC_RADDR1/U15/ZN (AND2_X1)                      0.05       0.57 r
+  U_ADDR_DEC_RADDR1/U6/ZN (NAND2_X1)                      0.03       0.60 f
+  U_ADDR_DEC_RADDR1/U4/Z (XOR2_X1)                        0.07       0.67 f
+  U_ADDR_DEC_RADDR1/U21/Z (MUX2_X1)                       0.08       0.75 f
+  U_ADDR_DEC_RADDR1/PHY_ADDR[5] (ADDR_DEC_N_GLOBAL_REG5_N_REG_PER_WIN5_N_WIN3_2)
+                                                          0.00       0.75 f
+  U_RF/ADD_RD1[5] (RF_ADDR_W6_DATA_W8)                    0.00       0.75 f
+  U_RF/U1312/ZN (AND2_X1)                                 0.05       0.80 f
+  U_RF/U1290/ZN (AND2_X1)                                 0.05       0.85 f
+  U_RF/U1286/ZN (AND2_X1)                                 0.06       0.91 f
+  U_RF/U1285/ZN (AOI22_X1)                                0.07       0.98 r
+  U_RF/U1284/ZN (OAI221_X1)                               0.05       1.03 f
+  U_RF/U1283/ZN (NOR4_X1)                                 0.10       1.13 r
+  U_RF/U1282/ZN (NAND4_X1)                                0.04       1.17 f
+  U_RF/U1280/Z (MUX2_X1)                                  0.07       1.24 f
+  U_RF/OUT1_reg[0]/D (DFF_X1)                             0.01       1.25 f
+  data arrival time                                                  1.25
+
+  clock CLK (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  U_RF/OUT1_reg[0]/CK (DFF_X1)                            0.00       2.00 r
+  library setup time                                     -0.04       1.96
+  data required time                                                 1.96
+  --------------------------------------------------------------------------
+  data required time                                                 1.96
+  data arrival time                                                 -1.25
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.71
+
+
+1

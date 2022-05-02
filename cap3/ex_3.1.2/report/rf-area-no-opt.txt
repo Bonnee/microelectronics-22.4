@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : RF_ADDR_W5_DATA_W32
+Version: F-2011.09-SP3
+Date   : Wed Apr 27 23:07:16 2022
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                          117
+Number of nets:                          4266
+Number of cells:                         3637
+Number of combinational cells:           2549
+Number of sequential cells:              1088
+Number of macros:                           0
+Number of buf/inv:                         78
+Number of references:                      19
+
+Combinational area:       3992.393994
+Noncombinational area:    4919.935822
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          8912.329816
+Total area:                 undefined
+1

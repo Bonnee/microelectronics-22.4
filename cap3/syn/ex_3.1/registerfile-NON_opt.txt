@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : register_file_ADDR_W2_DATA_W1
+Version: F-2011.09-SP3
+Date   : Thu Apr  7 11:19:15 2022
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                           15
+Number of nets:                            45
+Number of cells:                           32
+Number of combinational cells:             26
+Number of sequential cells:                 6
+Number of macros:                           0
+Number of buf/inv:                          2
+Number of references:                       8
+
+Combinational area:         35.644000
+Noncombinational area:      27.131999
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:            62.775999
+Total area:                 undefined
+1

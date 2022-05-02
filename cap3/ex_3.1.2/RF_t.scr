@@ -1,0 +1,27 @@
+analyze -library WORK -format vhdl {  /home/ms22.4/cap3/ex_3.1.2/RF.vhd  }
+
+elaborate -library WORK CFG_RF_BEH -parameters "DATA_W=32, ADDR_W=[expr int(log(32.0)/log(2))]"
+compile 
+report_timing > ./report/rf-timing-no-opt.txt
+report_area > ./report/rf-area-no-opt.txt
+report_timing -nworst 10 > ./report/rf-timing-no-opt-10worst.txt
+
+write -hierarchy -format ddc -output RF-behavioural-no-opt.ddc
+write -hierarchy -format vhdl -output RF-behavioural-no-opt.vhdl
+
+## Create clock
+create_clock -name "CLK" -period 2 CLK
+#report_clock
+compile
+report_timing > ./report/rf-timing-clk.txt
+
+write -hierarchy -format ddc -output RF-behavioural-clk.ddc
+write -hierarchy -format vhdl -output RF-behavioural-clk.vhdl
+
+set_max_delay 2 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_timing > ./report/rf-timing-max-delay.txt
+
+write -hierarchy -format ddc -output RF-behavioural-max-delay.ddc
+write -hierarchy -format vhdl -output RF-behavioural-max-delay.vhdl
+return
