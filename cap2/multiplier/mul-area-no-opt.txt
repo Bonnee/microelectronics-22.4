@@ -3,7 +3,7 @@
 Report : area
 Design : BOOTHMUL_NBIT32
 Version: F-2011.09-SP3
-Date   : Wed Apr  6 23:01:55 2022
+Date   : Tue May 31 17:01:48 2022
 ****************************************
 
 Library(s) Used:
@@ -19,10 +19,10 @@ Number of macros:                           0
 Number of buf/inv:                          0
 Number of references:                      32
 
-Combinational area:       7285.207990
+Combinational area:       6432.412036
 Noncombinational area:       0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:          7285.207990
+Total cell area:          6432.412036
 Total area:                 undefined
 1
