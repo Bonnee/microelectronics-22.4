@@ -1,0 +1,2 @@
+vsim -t 10ps work.CU_TEST -voptargs=+acc
+run 150ns
