@@ -1,0 +1,36 @@
+//###########################################################
+//# ELDO 2008.1 Production(64 bits) - Saved Window File
+//# Released Mon Jun 30 08:52:46 GMT 2008
+//#
+//# Note: This is an auto-generated file.
+//#
+//# Any edits that you make may cause the restore of
+//# this window to fail - EDIT AT YOUR OWN RISK
+//###########################################################
+
+
+// ===== Open new window =====
+OPEn WIndow -POSition 0 0 -MAXimized
+
+// ===== Create row #1 =====
+ADD WAveform  <ffdSU/TRAN>V(CK) 
+ADD WAveform -Row 1 <ffdSU/TRAN>V(DATA_IN) 
+ADD WAveform -Row 1 <ffdSU/TRAN>V(DATA_1OUT) 
+
+// ===== Set axis zero levels  =====
+SET AXis Properties -Axis Y1 -Row 1 -zerolevel on
+
+// ===== Create row #2 =====
+ADD WAveform  <ffdSU/TRAN>V(XFFD1.MN) 
+ADD WAveform -Row 2 <ffdSU/TRAN>V(XFFD1.M) 
+ADD WAveform -Row 2 <ffdSU/TRAN>V(XFFD1.CPI) 
+ADD WAveform -Row 2 <ffdSU/TRAN>V(XFFD1.CPN) 
+ADD WAveform -Row 2 <ffdSU/TRAN>V(XFFD1.SN) 
+ADD WAveform -Row 2 <ffdSU/TRAN>V(XFFD1.D) 
+ADD WAveform -Row 2 <ffdSU/TRAN>V(XFFD1.Q) 
+
+// ===== Set axis zero levels  =====
+SET AXis Properties -Axis Y1 -Row 2 -zerolevel on
+
+// ===== Format rows =====
+SET ROw Height -All -MAX

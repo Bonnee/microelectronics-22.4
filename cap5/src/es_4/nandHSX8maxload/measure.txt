@@ -1,0 +1,49 @@
+  -cload 0.05fF
+  Us measure :
+  RNAND        = 2.21971 - 2.15754 = 0.06217 ns
+  FNAND        = 1.20156 - 1.13773 = 0.06383 ns
+  NANDDELAYHL  = 1.18044 - 1.16301 = 0.01743 ns
+  NANDDELAYLH  = 2.19436 - 2.16299 = 0.03137 ns
+  MAXIGNDF     = 637.25290  uA at 1.18765 ns
+  MAXIVDDR     = -552.73318 uA at 2.19236 ns
+  MAXIGNDR     = 378.92833  uA at 2.17391 ns
+  MAXIVDDF     = -410.38597 uA at 1.17200 ns
+  MAXILOADF    = -1.42444   uA at 1.18957 ns
+  MAXILOADR    = 1.28843    uA at 2.19973 ns  
+ 
+  Eldo measure :
+  RNAND        =  6.2179E-11   targ=  2.2197E-09     trig=  2.1575E-09
+  FNAND        =  6.3836E-11   targ=  1.2016E-09     trig=  1.1377E-09
+  NANDDELAYHL  =  1.7455E-11   targ=  1.1805E-09     trig=  1.1630E-09
+  NANDDELAYLH  =  3.1347E-11   targ=  2.1943E-09     trig=  2.1630E-09
+  MAXIGNDF     =  6.3732E-04     at=  1.1876E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR     = -5.5277E-04     at=  2.1926E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR     =  3.7896E-04     at=  2.1736E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF     = -4.1041E-04     at=  1.1716E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF    = -1.4246E-06     at=  1.1896E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR    =  1.2887E-06     at=  2.1997E-09  from=  2.0000E-09     to=  3.0000E-09
+
+  -cload 50fF
+  Us measure :
+  RNAND        = 2.27691 - 2.17145 = 0.10546 ns
+  FNAND        = 1.25443 - 1.15359 = 0.10084 ns
+  NANDDELAYHL  = 1.21510 - 1.16304 = 0.05206 ns
+  NANDDELAYLH  = 2.22982 - 2.16274 = 0.06708 ns
+  MAXIGNDF     = 1.01643    mA at 1.22748 ns 
+  MAXIVDDR     = -882.56116 uA at 2.23336 ns 
+  MAXIGNDR     = 0.27672    mA at 2.17744 ns 
+  MAXIVDDF     = -272.98410 uA at 1.17634 ns 
+  MAXILOADF    = -729.10982 uA at 1.22926 ns 
+  MAXILOADR    = 656.04270  uA at 2.23654 ns 
+ 
+  Eldo measure :
+  RNAND        =  1.0546E-10   targ=  2.2769E-09     trig=  2.1714E-09
+  FNAND        =  1.0084E-10   targ=  1.2545E-09     trig=  1.1536E-09
+  NANDDELAYHL  =  5.2118E-11   targ=  1.2151E-09     trig=  1.1630E-09
+  NANDDELAYLH  =  6.6819E-11   targ=  2.2298E-09     trig=  2.1630E-09
+  MAXIGNDF     =  1.0164E-03     at=  1.2275E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXIVDDR     = -8.8259E-04     at=  2.2342E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIGNDR     =  2.7682E-04     at=  2.1777E-09  from=  2.0000E-09     to=  3.0000E-09
+  MAXIVDDF     = -2.7304E-04     at=  1.1760E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADF    = -7.2917E-04     at=  1.2295E-09  from=  1.0000E-09     to=  2.0000E-09
+  MAXILOADR    =  6.5614E-04     at=  2.2363E-09  from=  2.0000E-09     to=  3.0000E-09
