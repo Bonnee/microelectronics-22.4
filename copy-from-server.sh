@@ -1,3 +1,3 @@
 #!/bin/sh
-rsync -rvclh --delete --info=progress mspolito:~/cap* ./
+rsync -rvclh --copy-links --delete --info=progress mspolito:~/cap* ./
 

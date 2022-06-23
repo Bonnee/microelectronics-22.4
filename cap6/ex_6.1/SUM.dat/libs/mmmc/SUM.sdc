@@ -1,0 +1,1 @@
+/home/ms22.4/cap6/SUM.sdc

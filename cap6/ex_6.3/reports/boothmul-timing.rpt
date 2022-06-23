@@ -1,0 +1,77 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BOOTHMUL_NBIT8
+Version: F-2011.09-SP3
+Date   : Tue May 31 17:22:07 2022
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B[0] (input port)
+  Endpoint: S[15] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BOOTHMUL_NBIT8     5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  B[0] (in)                                               0.00       0.00 r
+  ENC1/B[0] (BOOTHENC_NBIT10_i0)                          0.00       0.00 r
+  ENC1/U16/ZN (INV_X1)                                    0.03       0.03 f
+  ENC1/U3/ZN (NOR2_X1)                                    0.16       0.19 r
+  ENC1/U13/ZN (NOR2_X1)                                   0.05       0.24 f
+  ENC1/U4/ZN (INV_X1)                                     0.08       0.33 r
+  ENC1/U15/ZN (OAI221_X1)                                 0.07       0.40 f
+  ENC1/O[2] (BOOTHENC_NBIT10_i0)                          0.00       0.40 f
+  ADDER1/A[2] (RCA_NBIT12)                                0.00       0.40 f
+  ADDER1/add_95/A[2] (RCA_NBIT12_DW01_add_0)              0.00       0.40 f
+  ADDER1/add_95/U1_2/CO (FA_X1)                           0.11       0.51 f
+  ADDER1/add_95/U1_3/CO (FA_X1)                           0.10       0.61 f
+  ADDER1/add_95/U1_4/CO (FA_X1)                           0.10       0.70 f
+  ADDER1/add_95/U1_5/CO (FA_X1)                           0.10       0.80 f
+  ADDER1/add_95/U1_6/CO (FA_X1)                           0.10       0.89 f
+  ADDER1/add_95/U1_7/CO (FA_X1)                           0.10       0.99 f
+  ADDER1/add_95/U1_8/CO (FA_X1)                           0.10       1.09 f
+  ADDER1/add_95/U1_9/CO (FA_X1)                           0.10       1.18 f
+  ADDER1/add_95/U1_10/CO (FA_X1)                          0.10       1.28 f
+  ADDER1/add_95/U1_11/S (FA_X1)                           0.14       1.41 f
+  ADDER1/add_95/SUM[11] (RCA_NBIT12_DW01_add_0)           0.00       1.41 f
+  ADDER1/S[11] (RCA_NBIT12)                               0.00       1.41 f
+  ADDER_2/A[11] (RCA_NBIT14)                              0.00       1.41 f
+  ADDER_2/add_95/A[11] (RCA_NBIT14_DW01_add_0)            0.00       1.41 f
+  ADDER_2/add_95/U1_11/CO (FA_X1)                         0.12       1.53 f
+  ADDER_2/add_95/U1_12/CO (FA_X1)                         0.10       1.63 f
+  ADDER_2/add_95/U1_13/S (FA_X1)                          0.14       1.76 f
+  ADDER_2/add_95/SUM[13] (RCA_NBIT14_DW01_add_0)          0.00       1.76 f
+  ADDER_2/S[13] (RCA_NBIT14)                              0.00       1.76 f
+  ADDER_3/A[13] (RCA_NBIT16)                              0.00       1.76 f
+  ADDER_3/add_95/A[13] (RCA_NBIT16_DW01_add_0)            0.00       1.76 f
+  ADDER_3/add_95/U1_13/CO (FA_X1)                         0.12       1.88 f
+  ADDER_3/add_95/U1_14/CO (FA_X1)                         0.10       1.98 f
+  ADDER_3/add_95/U1_15/S (FA_X1)                          0.13       2.11 r
+  ADDER_3/add_95/SUM[15] (RCA_NBIT16_DW01_add_0)          0.00       2.11 r
+  ADDER_3/S[15] (RCA_NBIT16)                              0.00       2.11 r
+  S[15] (out)                                             0.00       2.11 r
+  data arrival time                                                  2.11
+
+  max_delay                                               5.00       5.00
+  output external delay                                   0.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.89
+
+
+1

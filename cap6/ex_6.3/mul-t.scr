@@ -1,0 +1,34 @@
+puts "############## Analyzing VHDL FILES #################"
+
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/fa.vhd  }
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/rca.vhd  }
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/boothenc.vhd  }
+analyze -library WORK -format vhdl {  /home/ms22.4/cap2/multiplier/boothmul.vhd  }
+
+puts "############## Elaborating Top Entity ###############"
+elaborate -update -library WORK CFG_BOOTHMUL_MIXED -parameters "NBIT=8"
+
+# Sets the wire_load_attach_name attribute on designs, ports, hierarchical
+# cells of current design, for selecting a wire load model to use in calculatig
+# wire capacitance.
+set_wire_load_model -name 5K_hvratio_1_4
+
+puts "############## Set Constraint #######################"
+# Forces a clock of period Period connected to the input port CLK #
+#create_clock -name "CLK" -period 5 {"CLK"}
+#
+#forces a combinational max delay of 5 ns from each of the inputs
+#to each of th output in case combinational paths are present 
+set_max_delay 5 -from [all_inputs] -to [all_outputs]
+
+puts "############## Complie With Constraint ##############"
+compile -map_effort high
+
+puts "############## Save Reports and Netlists ############"
+report_timing > ./reports/boothmul-timing.rpt
+report_power > ./reports/boothmul-power.rpt
+report_area > ./reports/boothmul-area.rpt
+
+write -hierarchy -f vhdl -output ./netlist/boothmul.vhdl
+write -hierarchy -f verilog -output ./netlist/boothmul.v
+write_sdc ./dv_stuff/boothmul.sdc

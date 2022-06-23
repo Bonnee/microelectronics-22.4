@@ -1,0 +1,1129 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+Options:	
+Date:		Wed Jun  1 09:48:32 2022
+Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-1062.12.1.el7.x86_64) (1core*12cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+OS:		CentOS Linux release 7.7.1908 (Core)
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+<CMD> set ::DelayCal::PersistentAaeDataExist 1
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_ioOri R0
+<CMD> set conf_row_height 1.4
+<CMD> set dbRestoreDbVersion 17.11-s080_1
+<CMD> set dbgSavedDesignHasNewPreserves 1
+<CMD> set dcgHonorSignalNetNDR 1
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 0.1 ps.
+<CMD> set delaycal_input_transition_delay 0.1ps
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set edi_pe::pegEnablePreRouteDelayedExtraction 0
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set floorplan_default_site FreePDK45_38x28_10R_NP_162NW_34O
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set fp_core_height 67.2
+<CMD> set fp_core_to_bottom 5.04
+<CMD> set fp_core_to_left 5.13
+<CMD> set fp_core_to_right 5.13
+<CMD> set fp_core_to_top 5.04
+<CMD> set fp_core_width 70.11
+<CMD> set gpsPrivate::oigCGFixOutOfCoreChannels 1
+<CMD> set gpsPrivate::oigPBAwareTopoMode 23
+<CMD> set gpsPrivate::oigTopoBCMode 0
+<CMD> set gpsPrivate::oigTopoUseBABInTopLvlNodesInOCP 1
+<CMD> set gpsPrivate::oigUseNewMaxBufDistAPI 1
+<CMD> set ilmFlattenSetting 1
+<CMD> set init_gnd_net gnd
+<CMD> set init_lef_file /home/ms22.4/cap6/ex_6.1/SUM_route.dat/libs/lef/NangateOpenCellLibrary.lef
+<CMD> set init_mmmc_file /home/ms22.4/cap6/ex_6.1/SUM_route.dat/viewDefinition.tcl
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net vdd
+<CMD> set init_verilog /home/ms22.4/cap6/ex_6.1/SUM_route.dat/SUM.v.bin
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 128
+<CMD> set spgLimitedSearchRadius 1
+<CMD> set trgGlbOverflowPctV 0.0637755
+<CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set_global lib_build_asynch_de_assert_arc "true"
+<CMD> set_global report_precision "3"
+<CMD> set_global timing_collection_result_display_limit "100"
+<CMD> set_global timing_report_enable_efficient_collection_handling "true"
+<CMD> set_global timing_report_slack_on_timing_point "false"
+<CMD> set_global timing_report_enable_si_debug "false"
+<CMD> set_global timing_report_inferred_clock_gating_end_point_backward_compatible_mode "true"
+<CMD> set_global timing_report_arrival_window_property_backward_compatible_mode "true"
+<CMD> set_global timing_report_path_collection_ignore_unsupported_argument "true"
+<CMD> set_global timing_allow_input_delay_on_clock_source "false"
+<CMD> set_global timing_apply_default_primary_input_assertion "true"
+<CMD> set_global timing_build_all_hierarchical_pins "false"
+<CMD> set_global timing_case_analysis_for_sequential_propagation "false"
+<CMD> set_global timing_case_analysis_for_icg_propagation "false"
+<CMD> set_global timing_clock_phase_propagation "both"
+<CMD> set_global timing_cppr_threshold_ps "20"
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit "10000"
+<CMD> set_global timing_cppr_transition_sense "normal"
+<CMD> set_global timing_collection_all_fanin_fanout_traversal_mode "flat"
+<CMD> set_global timing_cppr_self_loop_mode "true"
+<CMD> set_global timing_cppr_remove_clock_to_data_crp "false"
+<CMD> set_global timing_cppr_skip_clock_reconvergence "false"
+<CMD> set_global timing_default_opcond_per_lib "true"
+<CMD> set_global timing_disable_bus_contention_check "false"
+<CMD> set_global timing_disable_clockperiod_checks "false"
+<CMD> set_global timing_disable_floating_bus_check "false"
+<CMD> set_global timing_disable_inferred_clock_gating_checks "false"
+<CMD> set_global timing_enable_tristate_clock_gating "false"
+<CMD> set_global timing_enable_efficient_inter_power_domain_analysis "false"
+<CMD> set_global timing_disable_internal_inout_cell_paths "true"
+<CMD> set_global timing_disable_internal_inout_net_arcs "true"
+<CMD> set_global timing_disable_lib_pulsewidth_checks "false"
+<CMD> set_global timing_disable_library_data_to_data_checks "true"
+<CMD> set_global timing_disable_nochange_checks "false"
+<CMD> set_global timing_disable_recovery_removal_checks "false"
+<CMD> set_global timing_disable_set_case_analysis "false"
+<CMD> set_global timing_disable_skew_checks "false"
+<CMD> set_global timing_disable_test_signal_arc "false"
+<CMD> set_global timing_disable_tristate_disable_arcs "false"
+<CMD> set_global timing_disable_user_data_to_data_checks "true"
+<CMD> set_global timing_enable_default_delay_arc "true"
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+<CMD> set_global timing_enable_power_ground_constants "false"
+<CMD> set_global timing_enable_case_analysis_conflict_warning "true"
+<CMD> set_global timing_enable_preset_clear_arcs "false"
+<CMD> set_global timing_enable_si_cppr "true"
+<CMD> set_global timing_enable_uncertainty_for_pulsewidth_checks "false"
+<CMD> set_global timing_extract_model_ignore_missing_check_arcs "false"
+<CMD> set_global timing_extract_model_write_effective_capacitance "false"
+<CMD> set_global timing_extract_model_improved_waveform_cache "true"
+<CMD> set_global timing_extract_model_write_asymmetric_lvf "true"
+<CMD> set_global timing_extract_model_slew_propagation_mode "worst_slew"
+<CMD> set_global timing_io_use_clock_network_latency "ideal"
+<CMD> set_global timing_path_groups_for_clocks "false"
+<CMD> set_global timing_reduce_multi_drive_net_arcs "true"
+<CMD> set_global timing_reduce_multi_drive_net_arcs_threshold "10000"
+<CMD> set_global timing_remove_clock_reconvergence_pessimism "false"
+<CMD> set_global timing_enable_timing_window_pessimism_removal "false"
+<CMD> set_global timing_self_loop_paths_no_skew "false"
+<CMD> set_global timing_self_loop_paths_no_skew_max_depth "10"
+<CMD> set_global timing_pba_coverage_mode_depth_limit "10"
+<CMD> set_global _timing_max_char_pin_name_limit_write_sdc "2000000"
+<CMD> set_global timing_self_loop_paths_no_skew_max_slack "0"
+<CMD> set_global timing_set_scaling_for_negative_checks "default"
+<CMD> set_global timing_set_scaling_for_negative_delays "default"
+<CMD> set_global timing_use_latch_time_borrow "true"
+<CMD> set_global write_global_slack_worst_trigger_path_on_clocks "false"
+<CMD> set_global timing_disable_non_sequential_checks "false"
+<CMD> set_global timing_disable_clock_gating_checks "false"
+<CMD> set_global timing_enable_data_through_clock_gating "true"
+<CMD> set_global aocv_chip_size "1e+30"
+<CMD> set_global aocv_core_size "1e+30"
+<CMD> set_global timing_dynamic_loop_breaking "false"
+<CMD> set_global timing_enable_mmmc_loop_handling "true"
+<CMD> set_global timing_propagate_latch_data_uncertainty "false"
+<CMD> set_global timing_allow_useful_skew_latency_per_view "false"
+<CMD> set_global timing_suppress_ilm_constraint_mismatches "false"
+<CMD> set_global timing_disable_report_header_info "false"
+<CMD> set_global timing_hier_object_name_compatibility "true"
+<CMD> set_global timing_max_gclock_latency_loops "2"
+<CMD> set_global timing_enable_new_path_exception_overwriting "true"
+<CMD> set_global timing_enable_simultaneous_setup_hold_mode "false"
+<CMD> set_global timing_null_collection_return_compatibility "false"
+<CMD> set_global timing_collection_support_downgrade "false"
+<CMD> set_global timing_enable_get_object_escaped_name_backward_compatible "false"
+<CMD> set_global timing_report_use_worst_parallel_cell_arc "false"
+<CMD> set_global timing_report_generated_clock_info "true"
+<CMD> set_global timing_warn_precision_setting_masks_violation "false"
+<CMD> set_global timing_report_group_based_mode "false"
+<CMD> set_global timing_report_filter_user_paths_from_group "false"
+<CMD> set_global timing_report_enable_worst_interclock_skew "true"
+<CMD> set_global timing_report_enable_markers "true"
+<CMD> set_global timing_report_enable_efficiency_improvements "false"
+<CMD> set_global _timing_mt_reporting_cmd_global "false"
+<CMD> set_global timing_disable_bidi_output_timing_checks "true"
+<CMD> set_global timing_disable_timing_model_latch_inferencing "true"
+<CMD> set_global timing_enable_multifrequency_latch_analysis "false"
+<CMD> set_global timing_ignore_lumped_rc_assertions "false"
+<CMD> set_global timing_library_genclk_use_group_name "false"
+<CMD> set_global timing_library_zero_negative_timing_check_arcs "false"
+<CMD> set_global timing_prefix_module_name_with_library_genclk "true"
+<CMD> set_global timing_enable_minmax_delay_segmentation "true"
+<CMD> set_global timing_twf_include_clock_groups "false"
+<CMD> set_global timing_report_constraint_use_report_timing_format "false"
+<CMD> set_global timing_defer_mmmc_object_updates "false"
+<CMD> set_global timing_enable_genclk_edge_based_source_latency "true"
+<CMD> set_global timing_set_clock_source_to_output_as_data "false"
+<CMD> set_global latch_time_borrow_mode "max_borrow"
+<CMD> set_global timing_use_latch_early_launch_edge "true"
+<CMD> set_global timing_report_timing_header_detail_info "default"
+<CMD> set_global timing_path_based_recompute_noise "false"
+<CMD> set_global timing_path_based_recompute_use_incr_slew "false"
+<CMD> set_global timing_enable_warning_on_partially_search_failure "true"
+<CMD> set_global timing_get_of_objects_hier_compatibility "false"
+<CMD> set_global timing_suppress_escape_characters "true"
+<CMD> set_global timing_enable_pessimistic_cppr_for_reconvergent_clock_paths "false"
+<CMD> set_global timing_multifrequency_clock_rounding_factor "1e-05"
+<CMD> set_global timing_extract_model_clock_path_derate "0"
+<CMD> set_global timing_disable_drv_reports_on_constant_nets "false"
+<CMD> set_global timing_use_incremental_si_transition "false"
+<CMD> set_global timing_enable_all_fanin_fanout_levels_compatibility "true"
+<CMD> set_global timing_clock_source_use_driving_cell "true"
+<CMD> set_global timing_disable_netlist_constants "false"
+<CMD> set_global timing_report_unconstrained_paths "false"
+<CMD> set_global timing_resolve_driver_conflicts "aggressive"
+<CMD> set_global timing_write_sdf_no_escape_backslash_control "false"
+<CMD> set_global timing_apply_exceptions_to_data_check_related_pin "false"
+<CMD> set_global timing_sdf_adjust_negative_setuphold "false"
+<CMD> set_global timing_disable_library_tiehi_tielo "false"
+<CMD> set_global timing_enable_uncertainty_for_clock_checks "false"
+<CMD> set_global timing_create_clock_default_propagated "false"
+<CMD> set_global timing_disable_retime_clock_path_slew_propagation "true"
+<CMD> set_global timing_ssta_generate_sta_timing_report_format "false"
+<CMD> set_global timing_ipd_derate_flow_use_path_segment_delay_difference "false"
+<CMD> set_global timing_driving_cell_override_library "false"
+<CMD> set_global timing_path_based_use_min_max_clock_slew_for_check "true"
+<CMD> set_global timing_ssta_enable_nsigma_enumeration "false"
+<CMD> set_global timing_extract_model_compatibility_mode "false"
+<CMD> set_global timing_extract_model_backward_compatible_report_mode "true"
+<CMD> set_global timing_enable_efficient_reporting "false"
+<CMD> set_global timing_path_based_enable_efficient_mode "true"
+<CMD> set_global timing_path_based_enable_multithreading "false"
+<CMD> set_global timing_enable_get_property_alias_access "true"
+<CMD> set_global _timing_constraint_efficient_clock_for_write_sdc "true"
+<CMD> set_global _timing_report_enable_efficient_mt_voltage_column "true"
+<CMD> set_global timing_report_disable_report_timing_rename_warning "true"
+<CMD> set_global timing_constraint_enable_property_keywords_with_filter_expression "true"
+<CMD> set_global timing_multi_voltage_enable_user_ipd_assertion "false"
+<CMD> set_global timing_report_property_case_value_support_rise_fall "false"
+<CMD> set_global timing_constraint_enable_write_exception_line_limit "false"
+<CMD> set_global timing_constraint_enable_efficient_pattern_match "false"
+<CMD> set_global timing_path_based_enable_multi_pass "false"
+<CMD> set_global timing_extract_model_aocv_mode "none"
+<CMD> set_global timing_extract_model_case_analysis_in_library "true"
+<CMD> set_global timing_extract_model_consider_design_level_drv "true"
+<CMD> set_global timing_extract_model_gating_as_nochange_arc "true"
+<CMD> set_global timing_extract_model_improved_characterization_point_selection "false"
+<CMD> set_global timing_extract_model_enable_cppr "false"
+<CMD> set_global timing_extract_model_clock_style_backward_compatible "false"
+<CMD> set_global timing_extract_model_include_latency_and_uncertainty "false"
+<CMD> set_global timing_extract_model_include_applied_load_in_characterization_range "false"
+<CMD> set_global timing_extract_model_include_applied_slew_in_characterization_range "false"
+<CMD> set_global timing_extract_model_rise_fall_cap_range "false"
+<CMD> set_global timing_extract_model_internal_power_ground_rails "true"
+<CMD> set_global timing_extract_model_disable_cycle_adjustment "false"
+<CMD> set_global timing_extract_model_mcp_through_internal_pin "false"
+<CMD> set_global timing_extract_model_si_aware "false"
+<CMD> set_global timing_extract_model_d2d_check_as_non_seq_check "true"
+<CMD> set_global timing_extract_model_enable_waveform_propagation "false"
+<CMD> set_global timing_extract_model_disable_3d_arcs "true"
+<CMD> set_global timing_extract_model_enable_ndw_writing "false"
+<CMD> set_global timing_extract_model_write_waveforms "false"
+<CMD> set_global timing_extract_model_enable_concurrent_extraction "false"
+<CMD> set_global timing_extract_model_enable_spatial_derate_mode "false"
+<CMD> set_global timing_extract_model_enable_parallel_arc_reduction "true"
+<CMD> set_global timing_generated_clocks_inherit_ideal_latency "false"
+<CMD> set_global timing_enable_timing_window_pessimism_removal "false"
+<CMD> set_global timing_enable_multi_drive_net_reduction_with_assertions "none"
+<CMD> set_global timing_ssta_report_endpoint_description "false"
+<CMD> set_global locv_inter_clock_use_worst_derate "false"
+<CMD> set_global locv_stage_count_with_IO "true"
+<CMD> set_global timing_aocv_analysis_mode "launch_capture"
+<CMD> set_global timing_apply_check_derate_to_external_output_delay "false"
+<CMD> set_global timing_disable_sdf_retain_arc_merging "false"
+<CMD> set_global timing_enable_clock_phase_based_rise_fall_derating "false"
+<CMD> set_global timing_enable_derating_for_pulsewidth_checks "false"
+<CMD> set_global timing_collection_variable_assignment_compatibility "true"
+<CMD> set_global timing_property_is_clock_gating_compatibility "true"
+<CMD> set_global timing_extract_model_backward_compatible_auto_validation "true"
+<CMD> set_global timing_enable_multi_threaded_reporting "true"
+<CMD> set_global timing_enable_sdc_compatible_data_check_mcp "false"
+<CMD> set_global timing_continue_on_mmmc_creation_error "false"
+<CMD> set_global timing_aocv_stage_count_recalculate_on_timing_reset "false"
+<CMD> set_global timing_disable_backward_compatible_input_output_delay "true"
+<CMD> set_global timing_report_backward_compatible_max_paths_reporting "false"
+<CMD> set_global timing_constraint_apply_annotation_value "0"
+<CMD> set_global _timing_enable_backward_compatible_latch_mode "true"
+<CMD> set_global timing_path_based_retimed_paths_limit "0"
+<CMD> set_global timing_enable_ssta_clock_only "false"
+<CMD> set_global timing_library_infer_cap_range_from_ccs_receiver_model "false"
+<CMD> set_global timing_library_ccs_receiver_weight_K "1"
+<CMD> set_global timing_read_library_without_sensitivity "false"
+<CMD> set_global timing_read_library_without_ecsm "false"
+<CMD> set_global timing_consider_false_path_in_timing_window "false"
+<CMD> set_global timing_path_based_enable_physical_branch_point "true"
+<CMD> set_global timing_enable_aocv_slack_based "false"
+<CMD> set_global timing_path_based_enable_transition_sense_based_branch_point "true"
+<CMD> set_global timing_derate_aocv_reference_point "1"
+<CMD> set_global timing_constraint_enable_efficient_property_writing_in_sdc "false"
+<CMD> set_global timing_constraint_enable_logging "false"
+<CMD> set_global timing_property_correct_binding_mechanism "false"
+<CMD> set_global timing_constraint_disable_min_max_input_delay_worst_casing "false"
+<CMD> set_global _timing_constraint_efficient_block_write_sdc "false"
+<CMD> set_global timing_constraint_enable_efficient_get_collection "true"
+<CMD> set_global _timing_constraint_lib_cell_support_for_driving_cell "false"
+<CMD> set_global timing_derate_ocv_reference_point "1"
+<CMD> set_global timing_all_registers_include_icg_cells "true"
+<CMD> set_global timing_enable_tcl_lists_with_collections "true"
+<CMD> set_global timing_enable_smart_ilm_constraint_messages "false"
+<CMD> set_global timing_report_enable_max_path_limit_crossed "false"
+<CMD> set_global timing_extract_model_ideal_clock_latency_arc "false"
+<CMD> set_global timing_enable_efficient_get_objects "false"
+<CMD> set_global timing_enable_efficient_non_regexp_token_based_search "false"
+<CMD> set_global timing_enable_efficient_non_regexp_token_based_filter "false"
+<CMD> set_global timing_constraint_enable_efficient_mode "true"
+<CMD> set_global timing_stage_evaluation_high_fanout_net_compatibility "false"
+<CMD> set_global timing_disable_output_as_clock_port "false"
+<CMD> set_global timing_enable_aocv_accurate_mode "false"
+<CMD> set_global timing_disable_tw_propagation_for_non_si_views "false"
+<CMD> set_global timing_enable_rc_mode_constraints_reader "false"
+<CMD> set_global timing_derate_aocv_dynamic_delays "true"
+<CMD> set_global timing_aocv_derate_mode "aocv_multiplicative"
+<CMD> set_global timing_spatial_derate_distance_mode "bounding_box"
+<CMD> set_global timing_spatial_derate_chip_size "1e+30"
+<CMD> set_global timing_socv_sigma_spatial_multiplier "1"
+<CMD> set_global timing_constraint_enable_efficient_timing_update "true"
+<CMD> set_global timing_constraint_efficient_pins_filter_collection "true"
+<CMD> set_global timing_derate_dynamic_compatibility "true"
+<CMD> set_global timing_constraint_enable_report_invalid_begin_end_points "false"
+<CMD> set_global timing_constraint_enable_detailed_report_invalid_begin_end_points "false"
+<CMD> set_global timing_constraint_skip_path_exception_ordering "false"
+<CMD> set_global timing_collection_preserve_db_collection "true"
+<CMD> set_global timing_constraint_enable_efficient_all_register_flow "true"
+<CMD> set_global timing_enable_backward_compatible_setspace_mode "false"
+<CMD> set_global timing_disable_parallel_arcs "true"
+<CMD> set_global timing_continue_on_error "false"
+<CMD> set_global timing_enable_get_objects_nocase_without_regexp "true"
+<CMD> set_global timing_skip_clock_mesh_cppr_common_point "false"
+<CMD> set_global timing_skip_non_sdc_commands_from_sdc_file "false"
+<CMD> set_global timing_property_exclude_clock_edge_adjustment_in_arrival "false"
+<CMD> set_global timing_enable_mt_get_pins_filter "true"
+<CMD> set_global timing_enable_mt_get_nets "true"
+<CMD> set_global _timing_report_constraint_use_default_frequency_for_zero_activity "true"
+<CMD> set_global _timing_report_constraint_efficient_timing_update "false"
+<CMD> set_global timing_constraint_enable_drv_limit_override "false"
+<CMD> set_global timing_check_timing_report_all_checks "false"
+<CMD> set_global timing_inter_power_domain_generate_configurations "true"
+<CMD> set_global timing_inter_power_domain_write_crossing_combinations "false"
+<CMD> set_global timing_report_only_simultaneous_transparent_latches "false"
+<CMD> set_global timing_report_drv_per_frequency "false"
+<CMD> set_global _timing_constraint_backward_compatible_elrf_assertion_flow "true"
+<CMD> set_global _timing_constraint_skip_compression_for_differential_exceptions "false"
+<CMD> set_global _timing_constraint_improved_path_resetting_flow "false"
+<CMD> set_global timing_report_max_transition_check_using_nsigma_slew "false"
+<CMD> set_global _timing_constraint_support_drive_cell_set_load_on_black_box_pins "false"
+<CMD> set_global _timing_constraint_reset_net_frequency_with_reset_timing "true"
+<CMD> set_global timing_constraint_enable_efficient_path_exception_resetting "true"
+<CMD> set_global timing_enable_efficient_threading_mode_for_get_objects "0"
+<CMD> set_global timing_socv_statistical_min_max_mode "mean_and_three_sigma_bounded"
+<CMD> set_global _timing_enable_backward_compatible_socv_parallel_arcs "false"
+<CMD> set_global _timing_enable_backward_compatible_socv_separate_sensitivities "false"
+<CMD> set_global timing_set_nsigma_multiplier "3"
+<CMD> set_global timing_socv_analysis_nsigma_multiplier "3"
+<CMD> set_global timing_enable_cppr_random_adjustment "true"
+<CMD> set_global timing_enable_get_ports_for_current_instance "false"
+<CMD> set_global timing_report_enable_verbose_ssta_mode "false"
+<CMD> set_global timing_report_socv_summary_mean_sigma "false"
+<CMD> set_global timing_constraint_efficient_lib_pin "true"
+<CMD> set_global timing_enable_backward_compatible_timing_derate_mode "true"
+<CMD> set_global write_global_slack_report_time_unit_backward_compatible_mode "false"
+<CMD> set_global timing_enable_get_objects_regexp_compatibility "false"
+<CMD> set_global timing_aocv_use_cell_depth_for_net "false"
+<CMD> set_global timing_enable_backward_compatible_minmax_delay_mode "false"
+<CMD> set_global timing_enable_early_late_data_slews_for_setuphold_mode_checks "false"
+<CMD> set_global timing_property_defined_clocks_compatibility_mode "false"
+<CMD> set_global timing_enable_backward_compatible_delay_constraint_mode "false"
+<CMD> set_global timing_enable_path_delay_to_unconstrained_endpoints_compatibility "false"
+<CMD> set_global timing_enable_spatial_derate_mode "false"
+<CMD> set_global timing_enable_backward_compatible_spatial_derate_mode "false"
+<CMD> set_global timing_enable_clock2clock_clockgating_check "false"
+<CMD> set_global timing_report_enable_auto_column_width "false"
+<CMD> set_global timing_report_enable_clock_unrolling "false"
+<CMD> set_global timing_enable_simultaneous_switching_derate "false"
+<CMD> set_global timing_disable_genclk_combinational_blocking "false"
+<CMD> set_global timing_path_based_enable_skip_reconvergent_clock_path "false"
+<CMD> set_global timing_enable_latch_thru_mode "false"
+<CMD> set_global timing_cppr_propagate_thru_latches "false"
+<CMD> set_global timing_enable_backward_compatible_path_adjust_mode "false"
+<CMD> set_global timing_enable_constraint_development_mode "false"
+<CMD> set_global _timing_enable_backward_compatible_aocv_slack_based_mode "false"
+<CMD> set_global timing_case_analysis_precedence_backward_compatibility "true"
+<CMD> set_global timing_case_analysis_propagation "true"
+<CMD> set_global timing_latch_disabled_arc_compatibility "true"
+<CMD> set_global timing_abstracted_model_flow_filter_zero_sdf "false"
+<CMD> set_global timing_enable_latch_setup_paths "true"
+<CMD> set_global timing_aocv_enable_slack_based_efficient_mode "true"
+<CMD> set_global timing_disable_backward_compatible_timing_derate_mode "false"
+<CMD> set_global timing_aocv_backward_compatible_slack_based_mode "false"
+<CMD> set_global timing_aocv_efficient_accurate_mode "true"
+<CMD> set_global timing_socv_preserve_variation_with_annotations "false"
+<CMD> set_global timing_enable_latch_borrow_mode_for_si_snalysis "true"
+<CMD> set_global timing_extract_model_exhaustive_validation_mode "false"
+<CMD> set_global timing_report_enable_skew_in_reports "false"
+<CMD> set_global timing_enable_hierarchical_get_nets_support "false"
+<CMD> set_global timing_enable_backward_compatible_clock2clock_path_exception_mode "false"
+<CMD> set_global timing_enable_pulsed_latch "true"
+<CMD> set_global timing_report_enable_novus_header "false"
+<CMD> set_global timing_extract_model_validate_unconstrained_paths "true"
+<CMD> set_global timing_path_based_enable_new_efficient_mode "false"
+<CMD> set_global timing_path_based_enable_efficient_session_mode "false"
+<CMD> set_global timing_continue_on_global_eol_error "true"
+<CMD> set_global _timing_report_get_arcs_use_default_syntech_arc "true"
+<CMD> set_global timing_enable_latency_through_clock_gating "true"
+<CMD> set_global timing_enable_clock_gating_backward_compatibility "true"
+<CMD> set_global timing_use_clock_pin_attribute_for_clock_net_marking "false"
+<CMD> set_global timing_constraint_append_to_collection_compatibility_mode "true"
+<CMD> set_global timing_report_retime_formatting_mode "manual"
+<CMD> set_global timing_enable_backward_compatible_cppr_branch_pin_mode "false"
+<CMD> set_global timing_report_backward_compatible_number_alignment "true"
+<CMD> set_global novus_get_property_error_suppress_rise_fall "false"
+<CMD> set_global timing_disable_backward_compatible_cppr_mode "true"
+<CMD> set_global timing_report_enable_clock_object_in_from_to "false"
+<CMD> set_global timing_report_enable_flag_field_symbols "false"
+<CMD> set_global timing_enable_efficient_unconstrained_report_timing "false"
+<CMD> set_global timing_path_based_enable_mvdd_multithreading "false"
+<CMD> set_global timing_path_based_enable_efficient_mvdd_flow "false"
+<CMD> set_global timing_path_based_enable_mvdd_flow "false"
+<CMD> set_global timing_enable_backward_compatible_nsigma_multiplier "true"
+<CMD> set_global timing_socv_view_based_nsigma_multiplier_mode "false"
+<CMD> set_global timing_enable_separate_device_slew_effect_sensitivities "false"
+<CMD> set_global timing_report_constraint_extended_cell_em_flow "false"
+<CMD> set_global timing_constraint_enable_group_path_resetting "false"
+<CMD> set_global auto_wire_load_selection "true"
+<CMD> set_global timing_report_constraint_format_compatibility "false"
+<CMD> set_global timing_report_constraint_enable_drv_on_ideal_network "true"
+<CMD> set_global timing_constraint_path_exceptions_from_to_precedence "true"
+<CMD> set_global timing_report_constraint_enable_extended_drv_format "false"
+<CMD> set_global timing_constraint_enable_search_path "false"
+<CMD> set_global timing_report_drv_per_frequency_per_input_slew "false"
+<CMD> set_global timing_property_build_hier_pin "true"
+<CMD> set_global timing_enable_path_exception_to_pin_compatibility "false"
+<CMD> set_global timing_coverage_mode_acceptable_worst_slack_threshold_ps "-1"
+<CMD> set_global timing_path_based_enable_data_to_data_check_retiming "true"
+<CMD> set_global timing_path_based_enable_multi_dimensional_filter "false"
+<CMD> set_global timing_report_enable_unique_pins_multiple_capture_clock_paths "false"
+<CMD> set_global timing_path_based_exhaustive_enable_design_coverage "false"
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit "20000000"
+<CMD> set_global timing_path_based_enable_exhaustive_depth_bounded_by_gba "true"
+<CMD> set_global timing_enable_get_objects_bus_name_compatibility "false"
+<CMD> set_global timing_path_based_enable_efficient_exhaustive_mode "false"
+<CMD> set_global timing_path_based_enable_aocv_efficient_exhaustive_mode "false"
+<CMD> set_global timing_socv_rc_variation_mode "false"
+<CMD> set_global timing_report_enable_disable_clock_gating_merged_constraint "true"
+<CMD> set_global timing_path_based_exhaustive_enable_violation_only_mode "true"
+<CMD> set_global timing_enable_backward_compatible_mt_mode "false"
+<CMD> set_global timing_write_sdc_dump_compressed_timing_derate "false"
+<CMD> set_global _timing_write_sdc_dump_compressed_max_transition "false"
+<CMD> set_global timing_path_based_automated_path_peeling "true"
+<CMD> set_global timing_report_enable_ipd_paths_only "false"
+<CMD> set_global timing_multi_voltage_enable_capture_clock_ipd_path "true"
+<CMD> set_global timing_report_enable_ipd_post_cppr_point "false"
+<CMD> set_global _timing_write_sdc_dump_compressed_max_capacitance "false"
+<CMD> set_global timing_path_based_aocv_efficient_distance_derate "false"
+<CMD> set_global timing_path_based_enable_efficient_adaptive_eco_db "false"
+<CMD> set_global timing_path_based_efficient_adaptive_eco_db_threshold "20"
+<CMD> set_global _timing_socv_enable_backward_compatible_mode "false"
+<CMD> set_global _timing_socv_enable_backward_compatible_accurate_mode "false"
+<CMD> set_global timing_enable_backward_compatible_socv_mode "false"
+<CMD> set_global timing_socv_enable_backward_compatible_analysis_mode "false"
+<CMD> set_global timing_path_based_enable_efficient_clock_path_pba "false"
+<CMD> set_global timing_path_based_memory_efficiency_level "false"
+<CMD> set_global timing_enable_lru_clear_level_for_pba_cache "4"
+<CMD> set_global timing_path_based_maximum_time_limit "0"
+<CMD> set_global timing_path_based_coverage_enable_incr_depth_mode "true"
+<CMD> set_global timing_property_return_null_collection_with_quiet "false"
+<CMD> set_global timing_constraint_disable_message_limit "false"
+<CMD> set_global timing_extract_model_separate_data_to_data_arcs "false"
+<CMD> set_global timing_all_registers_identify_macros_using_is_macro_cell "false"
+<CMD> set_global timing_path_based_enable_exhaustive_mode_compatibility "true"
+<CMD> set_global timing_report_enable_max_path_nworst_limit_warning "false"
+<CMD> set_global timing_path_based_enable_multi_pass_socv "false"
+<CMD> set_global _timing_property_transition_assertion_lib_compatibilty "true"
+<CMD> set_global timing_constraint_reset_path_exception_backward_compatible_flow "false"
+<CMD> set_global timing_report_enable_use_valid_start_end_points "false"
+<CMD> set_global _timing_constraint_backward_compatible_inexistent_clock_in_group_behavior "true"
+<CMD> set_global timing_path_based_enable_socv_multi_dimensional_filter "false"
+<CMD> set_global timing_disable_backward_compatible_max_delay_mode "false"
+<CMD> set_global timing_enable_backward_compatible_tw_mode "true"
+<CMD> set_global timing_constraints_enable_efficient_constraint_timing_update "false"
+<CMD> set_global _timing_enable_property_mapper_priority "false"
+<CMD> set_global _timing_constraint_efficient_path_exception_ordering "false"
+<CMD> set_global timing_report_enable_backward_compatible_pin_load_lookup "true"
+<CMD> set_global timing_disable_backward_compatible_timing_reset_mode "false"
+<CMD> set_global timing_path_based_enable_new_latch_thru_mode "true"
+<CMD> set_global timing_report_net_backward_compatible_mode "true"
+<CMD> set_global timing_path_based_enable_efficient_exhaustive_mode_writing "false"
+<CMD> set_global timing_constraint_enable_pin_sequence_support "false"
+<CMD> set_global timing_use_correct_el_for_latch_early_launch_path "true"
+<CMD> set_global timing_path_based_enable_required_time_pessimism_removal "true"
+<CMD> set_global timing_report_enable_efficient_cone_marking "false"
+<CMD> set_global timing_report_backward_compatible_early_launch_latch_mode "true"
+<CMD> set_global timing_path_based_coverage_return_incremental_path_collection "true"
+<CMD> set_global timing_inter_power_domain_always_report_clock_style_paths "true"
+<CMD> set_global timing_path_based_coverage_assert_last_pba_slack "false"
+<CMD> set_global timing_path_based_coverage_enable_auto_incr_depth_mode "false"
+<CMD> set_global timing_path_based_enable_retimed_source_insertion_delay "false"
+<CMD> set_global timing_path_based_enable_report_launch_clock_path "true"
+<CMD> set_global timing_constraint_enable_transition_for_block_scope "false"
+<CMD> set_global timing_extract_model_check_arcs_as_lvf "true"
+<CMD> set_global timing_extract_model_generated_clock_pin_name_compatibility "true"
+<CMD> set_global timing_path_based_enable_reset_gba_input_slew_sigma "false"
+<CMD> set_global timing_enable_is_memory_cell_library_attribute "false"
+<CMD> set_global timing_path_based_coverage_enable_user_slack_credit "false"
+<CMD> set_global timing_path_based_enable_new_max_borrow_mode "false"
+<CMD> set_global timing_enable_efficient_get_pins_filter_mode "0"
+<CMD> set_global timing_report_enable_verbose_ssta_mode_for_skewness "false"
+<CMD> set_global timing_path_based_exhaustive_coverage_analysis "false"
+<CMD> set_global timing_path_based_enable_new_socv_efficient_mode "false"
+<CMD> set_global _allow_line_number_display_for_error_warn_messages "true"
+<CMD> set_global _scale_capacitance_to_1ff "true"
+<CMD> set_global _scale_time_to_100fs "true"
+<CMD> set_global _scale_leakage_power_to_1pw "true"
+<CMD> set_global _timing_combine_tlf_non_unate_arcs "true"
+<CMD> set_global _timing_library_switch_on_undeclared_arcs_function "false"
+<CMD> set_global _map_2007_03_low_power_to_2004_06 "true"
+<CMD> init_design
+#% Begin Load MMMC data ... (date=06/01 09:50:11, mem=420.2M)
+**ERROR: (TCLCMD-989):	cannot open SDC file '/home/ms22.4/cap6/ex_6.1/SUM_route.dat/libs/mmmc/SUM.sdc' for mode 'coherent-synthesis'
+<CMD> set ::DelayCal::PersistentAaeDataExist 1
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set conf_ioOri R0
+<CMD> set conf_row_height 1.4
+<CMD> set dbRestoreDbVersion 17.11-s080_1
+<CMD> set dbgSavedDesignHasNewPreserves 1
+<CMD> set dcgHonorSignalNetNDR 1
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 0.1 ps.
+<CMD> set delaycal_input_transition_delay 0.1ps
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set eco_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set edi_pe::pegEnablePreRouteDelayedExtraction 0
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set floorplan_default_site FreePDK45_38x28_10R_NP_162NW_34O
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set fp_core_height 25.2
+<CMD> set fp_core_to_bottom 5.04
+<CMD> set fp_core_to_left 5.13
+<CMD> set fp_core_to_right 5.13
+<CMD> set fp_core_to_top 5.04
+<CMD> set fp_core_width 26.79
+<CMD> set gpsPrivate::oigCGFixOutOfCoreChannels 1
+<CMD> set gpsPrivate::oigPBAwareTopoMode 23
+<CMD> set gpsPrivate::oigTopoBCMode 0
+<CMD> set gpsPrivate::oigTopoUseBABInTopLvlNodesInOCP 1
+<CMD> set gpsPrivate::oigUseNewMaxBufDistAPI 1
+<CMD> set ilmFlattenSetting 1
+<CMD> set init_gnd_net gnd
+<CMD> set init_lef_file /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/libs/lef/NangateOpenCellLibrary.lef
+<CMD> set init_mmmc_file /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/viewDefinition.tcl
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net vdd
+<CMD> set init_verilog /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/BOOTHMUL_NBIT8.v.bin
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 128
+<CMD> set spgLimitedSearchRadius 1
+<CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> set_global lib_build_asynch_de_assert_arc "true"
+<CMD> set_global report_precision "3"
+<CMD> set_global timing_collection_result_display_limit "100"
+<CMD> set_global timing_report_enable_efficient_collection_handling "true"
+<CMD> set_global timing_report_slack_on_timing_point "false"
+<CMD> set_global timing_report_enable_si_debug "false"
+<CMD> set_global timing_report_inferred_clock_gating_end_point_backward_compatible_mode "true"
+<CMD> set_global timing_report_arrival_window_property_backward_compatible_mode "true"
+<CMD> set_global timing_report_path_collection_ignore_unsupported_argument "true"
+<CMD> set_global timing_allow_input_delay_on_clock_source "false"
+<CMD> set_global timing_apply_default_primary_input_assertion "true"
+<CMD> set_global timing_build_all_hierarchical_pins "false"
+<CMD> set_global timing_case_analysis_for_sequential_propagation "false"
+<CMD> set_global timing_case_analysis_for_icg_propagation "false"
+<CMD> set_global timing_clock_phase_propagation "both"
+<CMD> set_global timing_cppr_threshold_ps "20"
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit "10000"
+<CMD> set_global timing_cppr_transition_sense "normal"
+<CMD> set_global timing_collection_all_fanin_fanout_traversal_mode "flat"
+<CMD> set_global timing_cppr_self_loop_mode "true"
+<CMD> set_global timing_cppr_remove_clock_to_data_crp "false"
+<CMD> set_global timing_cppr_skip_clock_reconvergence "false"
+<CMD> set_global timing_default_opcond_per_lib "true"
+<CMD> set_global timing_disable_bus_contention_check "false"
+<CMD> set_global timing_disable_clockperiod_checks "false"
+<CMD> set_global timing_disable_floating_bus_check "false"
+<CMD> set_global timing_disable_inferred_clock_gating_checks "false"
+<CMD> set_global timing_enable_tristate_clock_gating "false"
+<CMD> set_global timing_enable_efficient_inter_power_domain_analysis "false"
+<CMD> set_global timing_disable_internal_inout_cell_paths "true"
+<CMD> set_global timing_disable_internal_inout_net_arcs "true"
+<CMD> set_global timing_disable_lib_pulsewidth_checks "false"
+<CMD> set_global timing_disable_library_data_to_data_checks "true"
+<CMD> set_global timing_disable_nochange_checks "false"
+<CMD> set_global timing_disable_recovery_removal_checks "false"
+<CMD> set_global timing_disable_set_case_analysis "false"
+<CMD> set_global timing_disable_skew_checks "false"
+<CMD> set_global timing_disable_test_signal_arc "false"
+<CMD> set_global timing_disable_tristate_disable_arcs "false"
+<CMD> set_global timing_disable_user_data_to_data_checks "true"
+<CMD> set_global timing_enable_default_delay_arc "true"
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+<CMD> set_global timing_enable_power_ground_constants "false"
+<CMD> set_global timing_enable_case_analysis_conflict_warning "true"
+<CMD> set_global timing_enable_preset_clear_arcs "false"
+<CMD> set_global timing_enable_si_cppr "true"
+<CMD> set_global timing_enable_uncertainty_for_pulsewidth_checks "false"
+<CMD> set_global timing_extract_model_ignore_missing_check_arcs "false"
+<CMD> set_global timing_extract_model_write_effective_capacitance "false"
+<CMD> set_global timing_extract_model_improved_waveform_cache "true"
+<CMD> set_global timing_extract_model_write_asymmetric_lvf "true"
+<CMD> set_global timing_extract_model_slew_propagation_mode "worst_slew"
+<CMD> set_global timing_io_use_clock_network_latency "ideal"
+<CMD> set_global timing_path_groups_for_clocks "false"
+<CMD> set_global timing_reduce_multi_drive_net_arcs "true"
+<CMD> set_global timing_reduce_multi_drive_net_arcs_threshold "10000"
+<CMD> set_global timing_remove_clock_reconvergence_pessimism "false"
+<CMD> set_global timing_enable_timing_window_pessimism_removal "false"
+<CMD> set_global timing_self_loop_paths_no_skew "false"
+<CMD> set_global timing_self_loop_paths_no_skew_max_depth "10"
+<CMD> set_global timing_pba_coverage_mode_depth_limit "10"
+<CMD> set_global _timing_max_char_pin_name_limit_write_sdc "2000000"
+<CMD> set_global timing_self_loop_paths_no_skew_max_slack "0"
+<CMD> set_global timing_set_scaling_for_negative_checks "default"
+<CMD> set_global timing_set_scaling_for_negative_delays "default"
+<CMD> set_global timing_use_latch_time_borrow "true"
+<CMD> set_global write_global_slack_worst_trigger_path_on_clocks "false"
+<CMD> set_global timing_disable_non_sequential_checks "false"
+<CMD> set_global timing_disable_clock_gating_checks "false"
+<CMD> set_global timing_enable_data_through_clock_gating "true"
+<CMD> set_global aocv_chip_size "1e+30"
+<CMD> set_global aocv_core_size "1e+30"
+<CMD> set_global timing_dynamic_loop_breaking "false"
+<CMD> set_global timing_enable_mmmc_loop_handling "true"
+<CMD> set_global timing_propagate_latch_data_uncertainty "false"
+<CMD> set_global timing_allow_useful_skew_latency_per_view "false"
+<CMD> set_global timing_suppress_ilm_constraint_mismatches "false"
+<CMD> set_global timing_disable_report_header_info "false"
+<CMD> set_global timing_hier_object_name_compatibility "true"
+<CMD> set_global timing_max_gclock_latency_loops "2"
+<CMD> set_global timing_enable_new_path_exception_overwriting "true"
+<CMD> set_global timing_enable_simultaneous_setup_hold_mode "false"
+<CMD> set_global timing_null_collection_return_compatibility "false"
+<CMD> set_global timing_collection_support_downgrade "false"
+<CMD> set_global timing_enable_get_object_escaped_name_backward_compatible "false"
+<CMD> set_global timing_report_use_worst_parallel_cell_arc "false"
+<CMD> set_global timing_report_generated_clock_info "true"
+<CMD> set_global timing_warn_precision_setting_masks_violation "false"
+<CMD> set_global timing_report_group_based_mode "false"
+<CMD> set_global timing_report_filter_user_paths_from_group "false"
+<CMD> set_global timing_report_enable_worst_interclock_skew "true"
+<CMD> set_global timing_report_enable_markers "true"
+<CMD> set_global timing_report_enable_efficiency_improvements "false"
+<CMD> set_global _timing_mt_reporting_cmd_global "false"
+<CMD> set_global timing_disable_bidi_output_timing_checks "true"
+<CMD> set_global timing_disable_timing_model_latch_inferencing "true"
+<CMD> set_global timing_enable_multifrequency_latch_analysis "false"
+<CMD> set_global timing_ignore_lumped_rc_assertions "false"
+<CMD> set_global timing_library_genclk_use_group_name "false"
+<CMD> set_global timing_library_zero_negative_timing_check_arcs "false"
+<CMD> set_global timing_prefix_module_name_with_library_genclk "true"
+<CMD> set_global timing_enable_minmax_delay_segmentation "true"
+<CMD> set_global timing_twf_include_clock_groups "false"
+<CMD> set_global timing_report_constraint_use_report_timing_format "false"
+<CMD> set_global timing_defer_mmmc_object_updates "false"
+<CMD> set_global timing_enable_genclk_edge_based_source_latency "true"
+<CMD> set_global timing_set_clock_source_to_output_as_data "false"
+<CMD> set_global latch_time_borrow_mode "max_borrow"
+<CMD> set_global timing_use_latch_early_launch_edge "true"
+<CMD> set_global timing_report_timing_header_detail_info "default"
+<CMD> set_global timing_path_based_recompute_noise "false"
+<CMD> set_global timing_path_based_recompute_use_incr_slew "false"
+<CMD> set_global timing_enable_warning_on_partially_search_failure "true"
+<CMD> set_global timing_get_of_objects_hier_compatibility "false"
+<CMD> set_global timing_suppress_escape_characters "true"
+<CMD> set_global timing_enable_pessimistic_cppr_for_reconvergent_clock_paths "false"
+<CMD> set_global timing_multifrequency_clock_rounding_factor "1e-05"
+<CMD> set_global timing_extract_model_clock_path_derate "0"
+<CMD> set_global timing_disable_drv_reports_on_constant_nets "false"
+<CMD> set_global timing_use_incremental_si_transition "false"
+<CMD> set_global timing_enable_all_fanin_fanout_levels_compatibility "true"
+<CMD> set_global timing_clock_source_use_driving_cell "true"
+<CMD> set_global timing_disable_netlist_constants "false"
+<CMD> set_global timing_report_unconstrained_paths "false"
+<CMD> set_global timing_resolve_driver_conflicts "aggressive"
+<CMD> set_global timing_write_sdf_no_escape_backslash_control "false"
+<CMD> set_global timing_apply_exceptions_to_data_check_related_pin "false"
+<CMD> set_global timing_sdf_adjust_negative_setuphold "false"
+<CMD> set_global timing_disable_library_tiehi_tielo "false"
+<CMD> set_global timing_enable_uncertainty_for_clock_checks "false"
+<CMD> set_global timing_create_clock_default_propagated "false"
+<CMD> set_global timing_disable_retime_clock_path_slew_propagation "true"
+<CMD> set_global timing_ssta_generate_sta_timing_report_format "false"
+<CMD> set_global timing_ipd_derate_flow_use_path_segment_delay_difference "false"
+<CMD> set_global timing_driving_cell_override_library "false"
+<CMD> set_global timing_path_based_use_min_max_clock_slew_for_check "true"
+<CMD> set_global timing_ssta_enable_nsigma_enumeration "false"
+<CMD> set_global timing_extract_model_compatibility_mode "false"
+<CMD> set_global timing_extract_model_backward_compatible_report_mode "true"
+<CMD> set_global timing_enable_efficient_reporting "false"
+<CMD> set_global timing_path_based_enable_efficient_mode "true"
+<CMD> set_global timing_path_based_enable_multithreading "false"
+<CMD> set_global timing_enable_get_property_alias_access "true"
+<CMD> set_global _timing_constraint_efficient_clock_for_write_sdc "true"
+<CMD> set_global _timing_report_enable_efficient_mt_voltage_column "true"
+<CMD> set_global timing_report_disable_report_timing_rename_warning "true"
+<CMD> set_global timing_constraint_enable_property_keywords_with_filter_expression "true"
+<CMD> set_global timing_multi_voltage_enable_user_ipd_assertion "false"
+<CMD> set_global timing_report_property_case_value_support_rise_fall "false"
+<CMD> set_global timing_constraint_enable_write_exception_line_limit "false"
+<CMD> set_global timing_constraint_enable_efficient_pattern_match "false"
+<CMD> set_global timing_path_based_enable_multi_pass "false"
+<CMD> set_global timing_extract_model_aocv_mode "none"
+<CMD> set_global timing_extract_model_case_analysis_in_library "true"
+<CMD> set_global timing_extract_model_consider_design_level_drv "true"
+<CMD> set_global timing_extract_model_gating_as_nochange_arc "true"
+<CMD> set_global timing_extract_model_improved_characterization_point_selection "false"
+<CMD> set_global timing_extract_model_enable_cppr "false"
+<CMD> set_global timing_extract_model_clock_style_backward_compatible "false"
+<CMD> set_global timing_extract_model_include_latency_and_uncertainty "false"
+<CMD> set_global timing_extract_model_include_applied_load_in_characterization_range "false"
+<CMD> set_global timing_extract_model_include_applied_slew_in_characterization_range "false"
+<CMD> set_global timing_extract_model_rise_fall_cap_range "false"
+<CMD> set_global timing_extract_model_internal_power_ground_rails "true"
+<CMD> set_global timing_extract_model_disable_cycle_adjustment "false"
+<CMD> set_global timing_extract_model_mcp_through_internal_pin "false"
+<CMD> set_global timing_extract_model_si_aware "false"
+<CMD> set_global timing_extract_model_d2d_check_as_non_seq_check "true"
+<CMD> set_global timing_extract_model_enable_waveform_propagation "false"
+<CMD> set_global timing_extract_model_disable_3d_arcs "true"
+<CMD> set_global timing_extract_model_enable_ndw_writing "false"
+<CMD> set_global timing_extract_model_write_waveforms "false"
+<CMD> set_global timing_extract_model_enable_concurrent_extraction "false"
+<CMD> set_global timing_extract_model_enable_spatial_derate_mode "false"
+<CMD> set_global timing_extract_model_enable_parallel_arc_reduction "true"
+<CMD> set_global timing_generated_clocks_inherit_ideal_latency "false"
+<CMD> set_global timing_enable_timing_window_pessimism_removal "false"
+<CMD> set_global timing_enable_multi_drive_net_reduction_with_assertions "none"
+<CMD> set_global timing_ssta_report_endpoint_description "false"
+<CMD> set_global locv_inter_clock_use_worst_derate "false"
+<CMD> set_global locv_stage_count_with_IO "true"
+<CMD> set_global timing_aocv_analysis_mode "launch_capture"
+<CMD> set_global timing_apply_check_derate_to_external_output_delay "false"
+<CMD> set_global timing_disable_sdf_retain_arc_merging "false"
+<CMD> set_global timing_enable_clock_phase_based_rise_fall_derating "false"
+<CMD> set_global timing_enable_derating_for_pulsewidth_checks "false"
+<CMD> set_global timing_collection_variable_assignment_compatibility "true"
+<CMD> set_global timing_property_is_clock_gating_compatibility "true"
+<CMD> set_global timing_extract_model_backward_compatible_auto_validation "true"
+<CMD> set_global timing_enable_multi_threaded_reporting "true"
+<CMD> set_global timing_enable_sdc_compatible_data_check_mcp "false"
+<CMD> set_global timing_continue_on_mmmc_creation_error "false"
+<CMD> set_global timing_aocv_stage_count_recalculate_on_timing_reset "false"
+<CMD> set_global timing_disable_backward_compatible_input_output_delay "true"
+<CMD> set_global timing_report_backward_compatible_max_paths_reporting "false"
+<CMD> set_global timing_constraint_apply_annotation_value "0"
+<CMD> set_global _timing_enable_backward_compatible_latch_mode "true"
+<CMD> set_global timing_path_based_retimed_paths_limit "0"
+<CMD> set_global timing_enable_ssta_clock_only "false"
+<CMD> set_global timing_library_infer_cap_range_from_ccs_receiver_model "false"
+<CMD> set_global timing_library_ccs_receiver_weight_K "1"
+<CMD> set_global timing_read_library_without_sensitivity "false"
+<CMD> set_global timing_read_library_without_ecsm "false"
+<CMD> set_global timing_consider_false_path_in_timing_window "false"
+<CMD> set_global timing_path_based_enable_physical_branch_point "true"
+<CMD> set_global timing_enable_aocv_slack_based "false"
+<CMD> set_global timing_path_based_enable_transition_sense_based_branch_point "true"
+<CMD> set_global timing_derate_aocv_reference_point "1"
+<CMD> set_global timing_constraint_enable_efficient_property_writing_in_sdc "false"
+<CMD> set_global timing_constraint_enable_logging "false"
+<CMD> set_global timing_property_correct_binding_mechanism "false"
+<CMD> set_global timing_constraint_disable_min_max_input_delay_worst_casing "false"
+<CMD> set_global _timing_constraint_efficient_block_write_sdc "false"
+<CMD> set_global timing_constraint_enable_efficient_get_collection "true"
+<CMD> set_global _timing_constraint_lib_cell_support_for_driving_cell "false"
+<CMD> set_global timing_derate_ocv_reference_point "1"
+<CMD> set_global timing_all_registers_include_icg_cells "true"
+<CMD> set_global timing_enable_tcl_lists_with_collections "true"
+<CMD> set_global timing_enable_smart_ilm_constraint_messages "false"
+<CMD> set_global timing_report_enable_max_path_limit_crossed "false"
+<CMD> set_global timing_extract_model_ideal_clock_latency_arc "false"
+<CMD> set_global timing_enable_efficient_get_objects "false"
+<CMD> set_global timing_enable_efficient_non_regexp_token_based_search "false"
+<CMD> set_global timing_enable_efficient_non_regexp_token_based_filter "false"
+<CMD> set_global timing_constraint_enable_efficient_mode "true"
+<CMD> set_global timing_stage_evaluation_high_fanout_net_compatibility "false"
+<CMD> set_global timing_disable_output_as_clock_port "false"
+<CMD> set_global timing_enable_aocv_accurate_mode "false"
+<CMD> set_global timing_disable_tw_propagation_for_non_si_views "false"
+<CMD> set_global timing_enable_rc_mode_constraints_reader "false"
+<CMD> set_global timing_derate_aocv_dynamic_delays "true"
+<CMD> set_global timing_aocv_derate_mode "aocv_multiplicative"
+<CMD> set_global timing_spatial_derate_distance_mode "bounding_box"
+<CMD> set_global timing_spatial_derate_chip_size "1e+30"
+<CMD> set_global timing_socv_sigma_spatial_multiplier "1"
+<CMD> set_global timing_constraint_enable_efficient_timing_update "true"
+<CMD> set_global timing_constraint_efficient_pins_filter_collection "true"
+<CMD> set_global timing_derate_dynamic_compatibility "true"
+<CMD> set_global timing_constraint_enable_report_invalid_begin_end_points "false"
+<CMD> set_global timing_constraint_enable_detailed_report_invalid_begin_end_points "false"
+<CMD> set_global timing_constraint_skip_path_exception_ordering "false"
+<CMD> set_global timing_collection_preserve_db_collection "true"
+<CMD> set_global timing_constraint_enable_efficient_all_register_flow "true"
+<CMD> set_global timing_enable_backward_compatible_setspace_mode "false"
+<CMD> set_global timing_disable_parallel_arcs "true"
+<CMD> set_global timing_continue_on_error "false"
+<CMD> set_global timing_enable_get_objects_nocase_without_regexp "true"
+<CMD> set_global timing_skip_clock_mesh_cppr_common_point "false"
+<CMD> set_global timing_skip_non_sdc_commands_from_sdc_file "false"
+<CMD> set_global timing_property_exclude_clock_edge_adjustment_in_arrival "false"
+<CMD> set_global timing_enable_mt_get_pins_filter "true"
+<CMD> set_global timing_enable_mt_get_nets "true"
+<CMD> set_global _timing_report_constraint_use_default_frequency_for_zero_activity "true"
+<CMD> set_global _timing_report_constraint_efficient_timing_update "false"
+<CMD> set_global timing_constraint_enable_drv_limit_override "false"
+<CMD> set_global timing_check_timing_report_all_checks "false"
+<CMD> set_global timing_inter_power_domain_generate_configurations "true"
+<CMD> set_global timing_inter_power_domain_write_crossing_combinations "false"
+<CMD> set_global timing_report_only_simultaneous_transparent_latches "false"
+<CMD> set_global timing_report_drv_per_frequency "false"
+<CMD> set_global _timing_constraint_backward_compatible_elrf_assertion_flow "true"
+<CMD> set_global _timing_constraint_skip_compression_for_differential_exceptions "false"
+<CMD> set_global _timing_constraint_improved_path_resetting_flow "false"
+<CMD> set_global timing_report_max_transition_check_using_nsigma_slew "false"
+<CMD> set_global _timing_constraint_support_drive_cell_set_load_on_black_box_pins "false"
+<CMD> set_global _timing_constraint_reset_net_frequency_with_reset_timing "true"
+<CMD> set_global timing_constraint_enable_efficient_path_exception_resetting "true"
+<CMD> set_global timing_enable_efficient_threading_mode_for_get_objects "0"
+<CMD> set_global timing_socv_statistical_min_max_mode "mean_and_three_sigma_bounded"
+<CMD> set_global _timing_enable_backward_compatible_socv_parallel_arcs "false"
+<CMD> set_global _timing_enable_backward_compatible_socv_separate_sensitivities "false"
+<CMD> set_global timing_set_nsigma_multiplier "3"
+<CMD> set_global timing_socv_analysis_nsigma_multiplier "3"
+<CMD> set_global timing_enable_cppr_random_adjustment "true"
+<CMD> set_global timing_enable_get_ports_for_current_instance "false"
+<CMD> set_global timing_report_enable_verbose_ssta_mode "false"
+<CMD> set_global timing_report_socv_summary_mean_sigma "false"
+<CMD> set_global timing_constraint_efficient_lib_pin "true"
+<CMD> set_global timing_enable_backward_compatible_timing_derate_mode "true"
+<CMD> set_global write_global_slack_report_time_unit_backward_compatible_mode "false"
+<CMD> set_global timing_enable_get_objects_regexp_compatibility "false"
+<CMD> set_global timing_aocv_use_cell_depth_for_net "false"
+<CMD> set_global timing_enable_backward_compatible_minmax_delay_mode "false"
+<CMD> set_global timing_enable_early_late_data_slews_for_setuphold_mode_checks "false"
+<CMD> set_global timing_property_defined_clocks_compatibility_mode "false"
+<CMD> set_global timing_enable_backward_compatible_delay_constraint_mode "false"
+<CMD> set_global timing_enable_path_delay_to_unconstrained_endpoints_compatibility "false"
+<CMD> set_global timing_enable_spatial_derate_mode "false"
+<CMD> set_global timing_enable_backward_compatible_spatial_derate_mode "false"
+<CMD> set_global timing_enable_clock2clock_clockgating_check "false"
+<CMD> set_global timing_report_enable_auto_column_width "false"
+<CMD> set_global timing_report_enable_clock_unrolling "false"
+<CMD> set_global timing_enable_simultaneous_switching_derate "false"
+<CMD> set_global timing_disable_genclk_combinational_blocking "false"
+<CMD> set_global timing_path_based_enable_skip_reconvergent_clock_path "false"
+<CMD> set_global timing_enable_latch_thru_mode "false"
+<CMD> set_global timing_cppr_propagate_thru_latches "false"
+<CMD> set_global timing_enable_backward_compatible_path_adjust_mode "false"
+<CMD> set_global timing_enable_constraint_development_mode "false"
+<CMD> set_global _timing_enable_backward_compatible_aocv_slack_based_mode "false"
+<CMD> set_global timing_case_analysis_precedence_backward_compatibility "true"
+<CMD> set_global timing_case_analysis_propagation "true"
+<CMD> set_global timing_latch_disabled_arc_compatibility "true"
+<CMD> set_global timing_abstracted_model_flow_filter_zero_sdf "false"
+<CMD> set_global timing_enable_latch_setup_paths "true"
+<CMD> set_global timing_aocv_enable_slack_based_efficient_mode "true"
+<CMD> set_global timing_disable_backward_compatible_timing_derate_mode "false"
+<CMD> set_global timing_aocv_backward_compatible_slack_based_mode "false"
+<CMD> set_global timing_aocv_efficient_accurate_mode "true"
+<CMD> set_global timing_socv_preserve_variation_with_annotations "false"
+<CMD> set_global timing_enable_latch_borrow_mode_for_si_snalysis "true"
+<CMD> set_global timing_extract_model_exhaustive_validation_mode "false"
+<CMD> set_global timing_report_enable_skew_in_reports "false"
+<CMD> set_global timing_enable_hierarchical_get_nets_support "false"
+<CMD> set_global timing_enable_backward_compatible_clock2clock_path_exception_mode "false"
+<CMD> set_global timing_enable_pulsed_latch "true"
+<CMD> set_global timing_report_enable_novus_header "false"
+<CMD> set_global timing_extract_model_validate_unconstrained_paths "true"
+<CMD> set_global timing_path_based_enable_new_efficient_mode "false"
+<CMD> set_global timing_path_based_enable_efficient_session_mode "false"
+<CMD> set_global timing_continue_on_global_eol_error "true"
+<CMD> set_global _timing_report_get_arcs_use_default_syntech_arc "true"
+<CMD> set_global timing_enable_latency_through_clock_gating "true"
+<CMD> set_global timing_enable_clock_gating_backward_compatibility "true"
+<CMD> set_global timing_use_clock_pin_attribute_for_clock_net_marking "false"
+<CMD> set_global timing_constraint_append_to_collection_compatibility_mode "true"
+<CMD> set_global timing_report_retime_formatting_mode "manual"
+<CMD> set_global timing_enable_backward_compatible_cppr_branch_pin_mode "false"
+<CMD> set_global timing_report_backward_compatible_number_alignment "true"
+<CMD> set_global novus_get_property_error_suppress_rise_fall "false"
+<CMD> set_global timing_disable_backward_compatible_cppr_mode "true"
+<CMD> set_global timing_report_enable_clock_object_in_from_to "false"
+<CMD> set_global timing_report_enable_flag_field_symbols "false"
+<CMD> set_global timing_enable_efficient_unconstrained_report_timing "false"
+<CMD> set_global timing_path_based_enable_mvdd_multithreading "false"
+<CMD> set_global timing_path_based_enable_efficient_mvdd_flow "false"
+<CMD> set_global timing_path_based_enable_mvdd_flow "false"
+<CMD> set_global timing_enable_backward_compatible_nsigma_multiplier "true"
+<CMD> set_global timing_socv_view_based_nsigma_multiplier_mode "false"
+<CMD> set_global timing_enable_separate_device_slew_effect_sensitivities "false"
+<CMD> set_global timing_report_constraint_extended_cell_em_flow "false"
+<CMD> set_global timing_constraint_enable_group_path_resetting "false"
+<CMD> set_global auto_wire_load_selection "true"
+<CMD> set_global timing_report_constraint_format_compatibility "false"
+<CMD> set_global timing_report_constraint_enable_drv_on_ideal_network "true"
+<CMD> set_global timing_constraint_path_exceptions_from_to_precedence "true"
+<CMD> set_global timing_report_constraint_enable_extended_drv_format "false"
+<CMD> set_global timing_constraint_enable_search_path "false"
+<CMD> set_global timing_report_drv_per_frequency_per_input_slew "false"
+<CMD> set_global timing_property_build_hier_pin "true"
+<CMD> set_global timing_enable_path_exception_to_pin_compatibility "false"
+<CMD> set_global timing_coverage_mode_acceptable_worst_slack_threshold_ps "-1"
+<CMD> set_global timing_path_based_enable_data_to_data_check_retiming "true"
+<CMD> set_global timing_path_based_enable_multi_dimensional_filter "false"
+<CMD> set_global timing_report_enable_unique_pins_multiple_capture_clock_paths "false"
+<CMD> set_global timing_path_based_exhaustive_enable_design_coverage "false"
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit "20000000"
+<CMD> set_global timing_path_based_enable_exhaustive_depth_bounded_by_gba "true"
+<CMD> set_global timing_enable_get_objects_bus_name_compatibility "false"
+<CMD> set_global timing_path_based_enable_efficient_exhaustive_mode "false"
+<CMD> set_global timing_path_based_enable_aocv_efficient_exhaustive_mode "false"
+<CMD> set_global timing_socv_rc_variation_mode "false"
+<CMD> set_global timing_report_enable_disable_clock_gating_merged_constraint "true"
+<CMD> set_global timing_path_based_exhaustive_enable_violation_only_mode "true"
+<CMD> set_global timing_enable_backward_compatible_mt_mode "false"
+<CMD> set_global timing_write_sdc_dump_compressed_timing_derate "false"
+<CMD> set_global _timing_write_sdc_dump_compressed_max_transition "false"
+<CMD> set_global timing_path_based_automated_path_peeling "true"
+<CMD> set_global timing_report_enable_ipd_paths_only "false"
+<CMD> set_global timing_multi_voltage_enable_capture_clock_ipd_path "true"
+<CMD> set_global timing_report_enable_ipd_post_cppr_point "false"
+<CMD> set_global _timing_write_sdc_dump_compressed_max_capacitance "false"
+<CMD> set_global timing_path_based_aocv_efficient_distance_derate "false"
+<CMD> set_global timing_path_based_enable_efficient_adaptive_eco_db "false"
+<CMD> set_global timing_path_based_efficient_adaptive_eco_db_threshold "20"
+<CMD> set_global _timing_socv_enable_backward_compatible_mode "false"
+<CMD> set_global _timing_socv_enable_backward_compatible_accurate_mode "false"
+<CMD> set_global timing_enable_backward_compatible_socv_mode "false"
+<CMD> set_global timing_socv_enable_backward_compatible_analysis_mode "false"
+<CMD> set_global timing_path_based_enable_efficient_clock_path_pba "false"
+<CMD> set_global timing_path_based_memory_efficiency_level "false"
+<CMD> set_global timing_enable_lru_clear_level_for_pba_cache "4"
+<CMD> set_global timing_path_based_maximum_time_limit "0"
+<CMD> set_global timing_path_based_coverage_enable_incr_depth_mode "true"
+<CMD> set_global timing_property_return_null_collection_with_quiet "false"
+<CMD> set_global timing_constraint_disable_message_limit "false"
+<CMD> set_global timing_extract_model_separate_data_to_data_arcs "false"
+<CMD> set_global timing_all_registers_identify_macros_using_is_macro_cell "false"
+<CMD> set_global timing_path_based_enable_exhaustive_mode_compatibility "true"
+<CMD> set_global timing_report_enable_max_path_nworst_limit_warning "false"
+<CMD> set_global timing_path_based_enable_multi_pass_socv "false"
+<CMD> set_global _timing_property_transition_assertion_lib_compatibilty "true"
+<CMD> set_global timing_constraint_reset_path_exception_backward_compatible_flow "false"
+<CMD> set_global timing_report_enable_use_valid_start_end_points "false"
+<CMD> set_global _timing_constraint_backward_compatible_inexistent_clock_in_group_behavior "true"
+<CMD> set_global timing_path_based_enable_socv_multi_dimensional_filter "false"
+<CMD> set_global timing_disable_backward_compatible_max_delay_mode "false"
+<CMD> set_global timing_enable_backward_compatible_tw_mode "true"
+<CMD> set_global timing_constraints_enable_efficient_constraint_timing_update "false"
+<CMD> set_global _timing_enable_property_mapper_priority "false"
+<CMD> set_global _timing_constraint_efficient_path_exception_ordering "false"
+<CMD> set_global timing_report_enable_backward_compatible_pin_load_lookup "true"
+<CMD> set_global timing_disable_backward_compatible_timing_reset_mode "false"
+<CMD> set_global timing_path_based_enable_new_latch_thru_mode "true"
+<CMD> set_global timing_report_net_backward_compatible_mode "true"
+<CMD> set_global timing_path_based_enable_efficient_exhaustive_mode_writing "false"
+<CMD> set_global timing_constraint_enable_pin_sequence_support "false"
+<CMD> set_global timing_use_correct_el_for_latch_early_launch_path "true"
+<CMD> set_global timing_path_based_enable_required_time_pessimism_removal "true"
+<CMD> set_global timing_report_enable_efficient_cone_marking "false"
+<CMD> set_global timing_report_backward_compatible_early_launch_latch_mode "true"
+<CMD> set_global timing_path_based_coverage_return_incremental_path_collection "true"
+<CMD> set_global timing_inter_power_domain_always_report_clock_style_paths "true"
+<CMD> set_global timing_path_based_coverage_assert_last_pba_slack "false"
+<CMD> set_global timing_path_based_coverage_enable_auto_incr_depth_mode "false"
+<CMD> set_global timing_path_based_enable_retimed_source_insertion_delay "false"
+<CMD> set_global timing_path_based_enable_report_launch_clock_path "true"
+<CMD> set_global timing_constraint_enable_transition_for_block_scope "false"
+<CMD> set_global timing_extract_model_check_arcs_as_lvf "true"
+<CMD> set_global timing_extract_model_generated_clock_pin_name_compatibility "true"
+<CMD> set_global timing_path_based_enable_reset_gba_input_slew_sigma "false"
+<CMD> set_global timing_enable_is_memory_cell_library_attribute "false"
+<CMD> set_global timing_path_based_coverage_enable_user_slack_credit "false"
+<CMD> set_global timing_path_based_enable_new_max_borrow_mode "false"
+<CMD> set_global timing_enable_efficient_get_pins_filter_mode "0"
+<CMD> set_global timing_report_enable_verbose_ssta_mode_for_skewness "false"
+<CMD> set_global timing_path_based_exhaustive_coverage_analysis "false"
+<CMD> set_global timing_path_based_enable_new_socv_efficient_mode "false"
+<CMD> set_global _allow_line_number_display_for_error_warn_messages "true"
+<CMD> set_global _scale_capacitance_to_1ff "true"
+<CMD> set_global _scale_time_to_100fs "true"
+<CMD> set_global _scale_leakage_power_to_1pw "true"
+<CMD> set_global _timing_combine_tlf_non_unate_arcs "true"
+<CMD> set_global _timing_library_switch_on_undeclared_arcs_function "false"
+<CMD> set_global _map_2007_03_low_power_to_2004_06 "true"
+<CMD> init_design
+% Begin Load MMMC data ... (date=06/01 09:54:30, mem=422.3M)
+Extraction setup Started 
+Extraction setup Started 
+Extraction setup Started 
+Extraction setup Started 
+Extraction setup Started 
+Extraction setup Started 
+% End Load MMMC data ... (date=06/01 09:54:30, total cpu=0:00:00.1, real=0:00:00.0, peak res=422.5M, current mem=422.5M)
+high standard low
+
+Loading LEF file /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/libs/lef/NangateOpenCellLibrary.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Wed Jun  1 09:54:31 2022
+viaInitial ends at Wed Jun  1 09:54:31 2022
+Loading view definition file from /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/viewDefinition.tcl
+Reading libsTYP timing library '/software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 134 cells in library 'NangateOpenCellLibrary' 
+*** End library_loading (cpu=0.05min, real=0.03min, mem=22.9M, fe_cpu=1.60min, fe_real=6.02min, fe_mem=536.3M) ***
+% Begin Load netlist data ... (date=06/01 09:54:33, mem=517.4M)
+*** Begin netlist parsing (mem=536.3M) ***
+Created 134 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/BOOTHMUL_NBIT8.v.bin'
+Reading binary database version 1
+
+*** Memory Usage v#1 (Current mem = 544.270M, initial mem = 179.684M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=544.3M) ***
+% End Load netlist data ... (date=06/01 09:54:33, total cpu=0:00:00.0, real=0:00:00.0, peak res=517.4M, current mem=445.4M)
+Top level cell is BOOTHMUL_NBIT8.
+Hooked 134 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell BOOTHMUL_NBIT8 ...
+*** Netlist is unique.
+** info: there are 145 modules.
+** info: there are 240 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 562.027M, initial mem = 179.684M) ***
+*info: set bottom ioPad orient R0
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/libs/mmmc/NCSU_FreePDK_45nm.capTbl ...
+Cap table was created using Encounter 08.10-p004_1.
+Process name: master_techFreePDK45.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default
+    RC-Corner Name        : standard
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 300 Celsius
+    RC-Corner Cap Table   : '/home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/libs/mmmc/NCSU_FreePDK_45nm.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '/home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/libs/mmmc/boothmul.sdc' ...
+Current (total cpu=0:01:37, real=0:06:03, peak res=572.6M, current mem=572.6M)
+INFO (CTE): Constraints read successfully.
+WARNING (CTE-25): Line: 8 of File /home/ms22.4/cap6/ex_6.3/BOOTHMUL_NBIT8.dat/libs/mmmc/boothmul.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=580.8M, current mem=580.8M)
+Current (total cpu=0:01:37, real=0:06:03, peak res=580.8M, current mem=580.8M)
+Total number of combinational cells: 99
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+<CMD> pan 5.519 10.004
+<CMD> selectObject IO_Pin {A[7]}
+<CMD> pan -0.270 -0.853
+<CMD> pan -2.490 -6.277
+<CMD> deselectAll
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 0.1 ps.
+<CMD> set delaycal_input_transition_delay 0.1ps
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set init_gnd_net gnd
+<CMD> set init_mmmc_file Default.view
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net vdd
+<CMD> set init_verilog ./netlist/boothmul.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> init_design
+**WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Memory Usage v#1 (Current mem = 692.363M, initial mem = 179.684M) ***
+*** Message Summary: 23 warning(s), 1 error(s)
+
+--- Ending "Innovus" (totcpu=0:02:07, real=0:09:25, mem=692.4M) ---

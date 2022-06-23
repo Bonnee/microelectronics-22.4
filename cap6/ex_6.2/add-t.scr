@@ -1,0 +1,39 @@
+puts "############## Analyzing VHDL FILES #################"
+
+analyze -library WORK -format vhdl { ./p4/carry_generator/COMM_PKG.vhd \
+                                    ./p4/sum_generator/rca.vhd \
+                                    ./p4/sum_generator/csb.vhd \
+                                    ./p4/carry_generator/PG_PRIM.vhd \
+                                    ./p4/carry_generator/GP.vhd \
+                                    ./p4/carry_generator/GG.vhd \
+                                    ./p4/carry_generator/CARRY_GENERATOR.vhd \
+                                    ./p4/sum_generator/sum_generator.vhd \
+                                    ./p4/P4_ADDER.vhd}
+
+puts "############## Elaborating Top Entity ###############"
+elaborate -update -library WORK CFG_P4_ADDER_STRUCTURAL -parameters "NBIT=32"
+
+# Sets the wire_load_attach_name attribute on designs, ports, hierarchical
+# cells of current design, for selecting a wire load model to use in calculatig
+# wire capacitance.
+set_wire_load_model -name 5K_hvratio_1_4
+
+puts "############## Set Constraint #######################"
+# Forces a clock of period Period connected to the input port CLK #
+#create_clock -name "CLK" -period 5 {"CLK"}
+#
+#forces a combinational max delay of 5 ns from each of the inputs
+#to each of th output in case combinational paths are present 
+set_max_delay 5 -from [all_inputs] -to [all_outputs]
+
+puts "############## Complie With Constraint ##############"
+compile -map_effort high
+
+puts "############## Save Reports and Netlists ############"
+report_timing > ./reports/p4_adder-timing.rpt
+report_power > ./reports/p4_adder-power.rpt
+report_area > ./reports/p4_adder-area.rpt
+
+write -hierarchy -f vhdl -output ./netlist/p4_adder.vhdl
+write -hierarchy -f verilog -output ./netlist/p4_adder.v
+write_sdc ./dv_stuff/p4_adder.sdc

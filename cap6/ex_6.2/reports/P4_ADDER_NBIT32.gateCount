@@ -1,0 +1,4 @@
+Gate area 0.7980 um^2
+Level 0 Module P4_ADDER_NBIT32                          Gates=       623 Cells=     302 Area=     497.2 um^2
+Level 1 Module U_CARRY_GENERATOR                        Gates=216        Cells=165      Area=     172.9 um^2
+Level 1 Module U_SUM_GENERATOR                          Gates=385        Cells=133      Area=     307.2 um^2
